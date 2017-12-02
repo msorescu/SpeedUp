@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tcs.topproducer.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tcs.topproducer.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tcs.topproducer.com/">
+      <s:element name="SearchMls">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchMlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchMlsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTaskResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sMessageHeader" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTaskStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sMessageHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sMessageHeader" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTaskProgressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDefListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDefListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTmkLogMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="logOn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetTmkLogModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetTmkLogModeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTmkLog">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTmkLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTmkLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="any" mixed="true">
+        <s:sequence>
+          <s:any minOccurs="0" maxOccurs="unbounded" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetadataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMLSFieldsAndCriteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMLSFieldsAndCriteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMLSFieldsAndCriteriaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishCategorizationPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moduleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishCategorizationPackageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PublishCategorizationPackageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategorizationPackage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moduleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategorizationPackageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategorizationPackageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishCategorizationPackageWithDataSourceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moduleID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataSourceID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishCategorizationPackageWithDataSourceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PublishCategorizationPackageWithDataSourceIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategorizationPackageWithDataSourceID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moduleID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataSourceID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategorizationPackageWithDataSourceIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategorizationPackageWithDataSourceIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMasterCategoryList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMasterCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMasterCategoryListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishMasterCategoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PublishMasterCategoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PublishMasterCategoryListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoardIDByModuleID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="moduleID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoardIDByModuleIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoardIDByModuleIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="displayName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryNameByPropertyClass">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="displayName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="propertyClass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryNameByPropertyClassResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryNameByPropertyClassResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTCSStandardFieldMapping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="i_sXMLParameter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTCSStandardFieldMappingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTCSStandardFieldMappingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchMlsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchMls" />
+  </wsdl:message>
+  <wsdl:message name="SearchMlsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchMlsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTask" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskResultSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskResult" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskResultSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaskProgress" />
+  </wsdl:message>
+  <wsdl:message name="GetTaskProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaskProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileContent" />
+  </wsdl:message>
+  <wsdl:message name="GetFileContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDefListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDefList" />
+  </wsdl:message>
+  <wsdl:message name="GetDefListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDefListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTmkLogModeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetTmkLogMode" />
+  </wsdl:message>
+  <wsdl:message name="SetTmkLogModeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetTmkLogModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTmkLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTmkLog" />
+  </wsdl:message>
+  <wsdl:message name="GetTmkLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTmkLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMlsBoardsSoapIn">
+    <wsdl:part name="xmlRequest" type="tns:any" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMlsBoardsSoapOut">
+    <wsdl:part name="UpdateMlsBoardsResult" type="tns:any" />
+  </wsdl:message>
+  <wsdl:message name="GetMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetadata" />
+  </wsdl:message>
+  <wsdl:message name="GetMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMLSFieldsAndCriteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMLSFieldsAndCriteria" />
+  </wsdl:message>
+  <wsdl:message name="GetMLSFieldsAndCriteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMLSFieldsAndCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PublishCategorizationPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:PublishCategorizationPackage" />
+  </wsdl:message>
+  <wsdl:message name="PublishCategorizationPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:PublishCategorizationPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategorizationPackageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategorizationPackage" />
+  </wsdl:message>
+  <wsdl:message name="GetCategorizationPackageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategorizationPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="PublishCategorizationPackageWithDataSourceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:PublishCategorizationPackageWithDataSourceID" />
+  </wsdl:message>
+  <wsdl:message name="PublishCategorizationPackageWithDataSourceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:PublishCategorizationPackageWithDataSourceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategorizationPackageWithDataSourceIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategorizationPackageWithDataSourceID" />
+  </wsdl:message>
+  <wsdl:message name="GetCategorizationPackageWithDataSourceIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategorizationPackageWithDataSourceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMasterCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMasterCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="GetMasterCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMasterCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="PublishMasterCategoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:PublishMasterCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="PublishMasterCategoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:PublishMasterCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardIDByModuleIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoardIDByModuleID" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardIDByModuleIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoardIDByModuleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryName" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryNameByPropertyClassSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameByPropertyClass" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryNameByPropertyClassSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryNameByPropertyClassResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTCSStandardFieldMappingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTCSStandardFieldMapping" />
+  </wsdl:message>
+  <wsdl:message name="GetTCSStandardFieldMappingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTCSStandardFieldMappingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MlsSoap">
+    <wsdl:operation name="SearchMls">
+      <wsdl:input message="tns:SearchMlsSoapIn" />
+      <wsdl:output message="tns:SearchMlsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <wsdl:input message="tns:CreateTaskSoapIn" />
+      <wsdl:output message="tns:CreateTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskStatus">
+      <wsdl:input message="tns:GetTaskStatusSoapIn" />
+      <wsdl:output message="tns:GetTaskStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskResult">
+      <wsdl:input message="tns:GetTaskResultSoapIn" />
+      <wsdl:output message="tns:GetTaskResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskProgress">
+      <wsdl:input message="tns:GetTaskProgressSoapIn" />
+      <wsdl:output message="tns:GetTaskProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileContent">
+      <wsdl:input message="tns:GetFileContentSoapIn" />
+      <wsdl:output message="tns:GetFileContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefList">
+      <wsdl:input message="tns:GetDefListSoapIn" />
+      <wsdl:output message="tns:GetDefListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTmkLogMode">
+      <wsdl:input message="tns:SetTmkLogModeSoapIn" />
+      <wsdl:output message="tns:SetTmkLogModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTmkLog">
+      <wsdl:input message="tns:GetTmkLogSoapIn" />
+      <wsdl:output message="tns:GetTmkLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMlsBoards">
+      <wsdl:input message="tns:UpdateMlsBoardsSoapIn" />
+      <wsdl:output message="tns:UpdateMlsBoardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <wsdl:input message="tns:GetMetadataSoapIn" />
+      <wsdl:output message="tns:GetMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMLSFieldsAndCriteria">
+      <wsdl:input message="tns:GetMLSFieldsAndCriteriaSoapIn" />
+      <wsdl:output message="tns:GetMLSFieldsAndCriteriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackage">
+      <wsdl:input message="tns:PublishCategorizationPackageSoapIn" />
+      <wsdl:output message="tns:PublishCategorizationPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackage">
+      <wsdl:input message="tns:GetCategorizationPackageSoapIn" />
+      <wsdl:output message="tns:GetCategorizationPackageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackageWithDataSourceID">
+      <wsdl:input message="tns:PublishCategorizationPackageWithDataSourceIDSoapIn" />
+      <wsdl:output message="tns:PublishCategorizationPackageWithDataSourceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackageWithDataSourceID">
+      <wsdl:input message="tns:GetCategorizationPackageWithDataSourceIDSoapIn" />
+      <wsdl:output message="tns:GetCategorizationPackageWithDataSourceIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterCategoryList">
+      <wsdl:input message="tns:GetMasterCategoryListSoapIn" />
+      <wsdl:output message="tns:GetMasterCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishMasterCategoryList">
+      <wsdl:input message="tns:PublishMasterCategoryListSoapIn" />
+      <wsdl:output message="tns:PublishMasterCategoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardIDByModuleID">
+      <wsdl:input message="tns:GetBoardIDByModuleIDSoapIn" />
+      <wsdl:output message="tns:GetBoardIDByModuleIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <wsdl:input message="tns:GetCategoryNameSoapIn" />
+      <wsdl:output message="tns:GetCategoryNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryNameByPropertyClass">
+      <wsdl:input message="tns:GetCategoryNameByPropertyClassSoapIn" />
+      <wsdl:output message="tns:GetCategoryNameByPropertyClassSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTCSStandardFieldMapping">
+      <wsdl:input message="tns:GetTCSStandardFieldMappingSoapIn" />
+      <wsdl:output message="tns:GetTCSStandardFieldMappingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MlsSoap" type="tns:MlsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchMls">
+      <soap:operation soapAction="http://tcs.topproducer.com/SearchMls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <soap:operation soapAction="http://tcs.topproducer.com/CreateTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskStatus">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetTaskStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskResult">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetTaskResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskProgress">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetTaskProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileContent">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetFileContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefList">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetDefList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTmkLogMode">
+      <soap:operation soapAction="http://tcs.topproducer.com/SetTmkLogMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTmkLog">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetTmkLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMlsBoards">
+      <soap:operation soapAction="http://tcs.topproducer.com/UpdateMlsBoards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLSFieldsAndCriteria">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetMLSFieldsAndCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackage">
+      <soap:operation soapAction="http://tcs.topproducer.com/PublishCategorizationPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackage">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetCategorizationPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackageWithDataSourceID">
+      <soap:operation soapAction="http://tcs.topproducer.com/PublishCategorizationPackageWithDataSourceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackageWithDataSourceID">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetCategorizationPackageWithDataSourceID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterCategoryList">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetMasterCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishMasterCategoryList">
+      <soap:operation soapAction="http://tcs.topproducer.com/PublishMasterCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardIDByModuleID">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetBoardIDByModuleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetCategoryName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryNameByPropertyClass">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetCategoryNameByPropertyClass" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTCSStandardFieldMapping">
+      <soap:operation soapAction="http://tcs.topproducer.com/GetTCSStandardFieldMapping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MlsSoap12" type="tns:MlsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchMls">
+      <soap12:operation soapAction="http://tcs.topproducer.com/SearchMls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <soap12:operation soapAction="http://tcs.topproducer.com/CreateTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskStatus">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetTaskStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskResult">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetTaskResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaskProgress">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetTaskProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileContent">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetFileContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefList">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetDefList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTmkLogMode">
+      <soap12:operation soapAction="http://tcs.topproducer.com/SetTmkLogMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTmkLog">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetTmkLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMlsBoards">
+      <soap12:operation soapAction="http://tcs.topproducer.com/UpdateMlsBoards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMLSFieldsAndCriteria">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetMLSFieldsAndCriteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackage">
+      <soap12:operation soapAction="http://tcs.topproducer.com/PublishCategorizationPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackage">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetCategorizationPackage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishCategorizationPackageWithDataSourceID">
+      <soap12:operation soapAction="http://tcs.topproducer.com/PublishCategorizationPackageWithDataSourceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategorizationPackageWithDataSourceID">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetCategorizationPackageWithDataSourceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterCategoryList">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetMasterCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishMasterCategoryList">
+      <soap12:operation soapAction="http://tcs.topproducer.com/PublishMasterCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardIDByModuleID">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetBoardIDByModuleID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryName">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetCategoryName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryNameByPropertyClass">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetCategoryNameByPropertyClass" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTCSStandardFieldMapping">
+      <soap12:operation soapAction="http://tcs.topproducer.com/GetTCSStandardFieldMapping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Mls">
+    <wsdl:port name="MlsSoap" binding="tns:MlsSoap">
+      <soap:address location="http://tcssqa1.tpolab.com/TCS/TCSWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MlsSoap12" binding="tns:MlsSoap12">
+      <soap12:address location="http://tcssqa1.tpolab.com/TCS/TCSWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

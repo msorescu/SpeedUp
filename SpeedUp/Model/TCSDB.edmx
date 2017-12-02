@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TCSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TCSModelStoreContainer">
+          <EntitySet Name="CleanLogins1" EntityType="TCSModel.Store.CleanLogins1" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="mls_vendor" EntityType="TCSModel.Store.mls_vendor" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tcs_clean_loggins" EntityType="TCSModel.Store.tcs_clean_loggins" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tcs_mls_metadata_fields" EntityType="TCSModel.Store.tcs_mls_metadata_fields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tcs_module_class_settings" EntityType="TCSModel.Store.tcs_module_class_settings" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tcs_rets_connection_info" EntityType="TCSModel.Store.tcs_rets_connection_info" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="tcs_standard_result_fields" EntityType="TCSModel.Store.tcs_standard_result_fields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          </EntityContainer>
+        <EntityType Name="CleanLogins1">
+          <Key>
+            <PropertyRef Name="module_id" />
+          </Key>
+          <Property Name="module_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="mls_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="data_source_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="login_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="rets_url" Type="nvarchar" MaxLength="500" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_agent" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_agent_password" Type="nvarchar" MaxLength="50" />
+          <Property Name="rets_version" Type="nvarchar" MaxLength="50" />
+          <Property Name="http_version" Type="nvarchar" MaxLength="50" />
+          <Property Name="http_method" Type="nvarchar" MaxLength="50" />
+          <Property Name="auth_type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="mls_vendor">
+          <Key>
+            <PropertyRef Name="mlsid" />
+          </Key>
+          <Property Name="mlsid" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="modulename" Type="nvarchar" MaxLength="50" />
+          <Property Name="moduleid" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="basemlsid" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tcs_clean_loggins">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="user_name" />
+          </Key>
+          <Property Name="module_id" Type="smallint" Nullable="false" />
+          <Property Name="module_name" Type="nvarchar" MaxLength="255" />
+          <Property Name="data_source_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="login_type" Type="nvarchar" MaxLength="255" />
+          <Property Name="rets_url" Type="nvarchar" MaxLength="255" />
+          <Property Name="user_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="password" Type="nvarchar" MaxLength="255" />
+          <Property Name="user_agent" Type="nvarchar" MaxLength="255" />
+          <Property Name="user_agent_password" Type="nvarchar" MaxLength="255" />
+          <Property Name="rets_version" Type="varchar" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="tcs_mls_metadata_fields">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="system_name" />
+            <PropertyRef Name="resource" />
+            <PropertyRef Name="class" />
+          </Key>
+          <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="module_id" Type="smallint" Nullable="false" />
+          <Property Name="system_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="long_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="standard_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="maximum_length" Type="int" />
+          <Property Name="data_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="resource" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="class" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="resource_type" Type="int" />
+        </EntityType>
+        <EntityType Name="tcs_module_class_settings">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="connection_name" />
+          </Key>
+          <Property Name="module_id" Type="smallint" Nullable="false" />
+          <Property Name="connection_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="class" Type="nvarchar" MaxLength="64" />
+          <Property Name="when_updated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tcs_rets_connection_info">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="account_type" />
+            <PropertyRef Name="rdc_code" />
+          </Key>
+          <Property Name="module_id" Type="smallint" Nullable="false" />
+          <Property Name="account_type" Type="int" Nullable="false" />
+          <Property Name="rdc_code" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="user_agent" Type="nvarchar" MaxLength="50" />
+          <Property Name="ua_password" Type="nvarchar" MaxLength="50" />
+          <Property Name="login_url" Type="nchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tcs_standard_result_fields">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="field_name" />
+            <PropertyRef Name="rets_long_name" />
+          </Key>
+          <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="module_id" Type="smallint" Nullable="false" />
+          <Property Name="field_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="rets_long_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="system_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="property_class" Type="nvarchar" MaxLength="100" />
+          <Property Name="property_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="def_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="resource_type" Type="int" />
+        </EntityType>
+        <Function Name="cma_GetMLSConnection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="board_id" Type="smallint" Mode="In" />
+          <Parameter Name="connection_type" Type="nvarchar" Mode="In" />
+          <Parameter Name="connection_name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="PR_tcs_standard_result_fields_GetLongname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tcs_standard_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="vendor_name" Type="nvarchar" Mode="In" />
+          <Parameter Name="resource_type" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TCSModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="TCSEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="tcs_module_class_settings" EntityType="TCSModel.tcs_module_class_settings" />
+          <FunctionImport Name="tcs_GetBoardID">
+          <Parameter Name="module_id" Mode="In" Type="Int16" />
+          </FunctionImport>
+          <FunctionImport Name="cma_GetMLSConnection" ReturnType="Collection(TCSModel.cma_GetMLSConnection_Result)">
+            <Parameter Name="board_id" Mode="In" Type="Int16" />
+            <Parameter Name="connection_type" Mode="In" Type="String" />
+            <Parameter Name="connection_name" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="tcs_rets_connection_info" EntityType="TCSModel.tcs_rets_connection_info" />
+          <EntitySet Name="tcs_mls_metadata_fields" EntityType="TCSModel.tcs_mls_metadata_fields" />
+          <EntitySet Name="tcs_standard_result_fields" EntityType="TCSModel.tcs_standard_result_fields" />
+          <FunctionImport Name="PR_tcs_standard_result_fields_GetLongname" ReturnType="Collection(TCSModel.PR_tcs_standard_result_fields_GetLongname_Result)">
+            <Parameter Name="tcs_standard_name" Mode="In" Type="String" />
+            <Parameter Name="vendor_name" Mode="In" Type="String" />
+            <Parameter Name="resource_type" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="tcs_clean_loggins" EntityType="TCSModel.tcs_clean_loggins" />
+          <EntitySet Name="CleanLogins1" EntityType="TCSModel.CleanLogins1" />
+          <EntitySet Name="mls_vendor" EntityType="TCSModel.mls_vendor" />
+        </EntityContainer>
+        <EntityType Name="tcs_module_class_settings">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="connection_name" />
+          </Key>
+          <Property Name="module_id" Type="Int16" Nullable="false" />
+          <Property Name="connection_name" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="class" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="when_updated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <ComplexType Name="cma_GetMLSConnection_Result">
+          <Property Type="Int16" Name="board_id" Nullable="false" />
+          <Property Type="String" Name="vendor_name" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="state_name" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="board_name" Nullable="false" MaxLength="256" />
+          <Property Type="Int16" Name="module_id" Nullable="true" />
+          <Property Type="String" Name="module_name" Nullable="true" MaxLength="256" />
+          <Property Type="String" Name="type" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="url_location_path" Nullable="false" MaxLength="512" />
+          <Property Type="String" Name="version" Nullable="false" MaxLength="64" />
+          <Property Type="Guid" Name="connection_id" Nullable="false" />
+          <Property Type="String" Name="connection_type" Nullable="false" MaxLength="64" />
+          <Property Type="String" Name="connection_name" Nullable="false" MaxLength="64" />
+          <Property Type="Int16" Name="is_login_required" Nullable="false" />
+          <Property Type="String" Name="property_sub_type" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="type_description" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="definition_file" Nullable="false" MaxLength="512" />
+          <Property Type="DateTime" Name="when_checked" Nullable="false" Precision="23" />
+          <Property Type="Int32" Name="mls_search_order" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="tcs_ModuleID_Result">
+          <Property Type="Int16" Name="ModuleID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="tcs_rets_connection_info">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="account_type" />
+            <PropertyRef Name="rdc_code" />
+          </Key>
+          <Property Type="Int16" Name="module_id" Nullable="false" />
+          <Property Type="Int32" Name="account_type" Nullable="false" />
+          <Property Type="String" Name="rdc_code" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="user_name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_agent" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ua_password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="login_url" MaxLength="300" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tcs_mls_metadata_fields">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="system_name" />
+            <PropertyRef Name="resource" />
+            <PropertyRef Name="class" />
+          </Key>
+          <Property Type="Int64" Name="field_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int16" Name="module_id" Nullable="false" />
+          <Property Type="String" Name="system_name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="long_name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="standard_name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="maximum_length" />
+          <Property Type="String" Name="data_type" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="resource" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="class" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="resource_type" />
+        </EntityType>
+        <EntityType Name="tcs_standard_result_fields">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="field_name" />
+            <PropertyRef Name="rets_long_name" />
+          </Key>
+          <Property Type="Int64" Name="field_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="Int16" Name="module_id" Nullable="false" />
+          <Property Type="String" Name="field_name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rets_long_name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="system_name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="property_class" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="property_type" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="def_name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="resource_type" />
+        </EntityType>
+        <ComplexType Name="PR_tcs_standard_result_fields_GetLongname_Result">
+          <Property Type="String" Name="field_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="rets_long_name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="system_name" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="num" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="tcs_clean_loggins">
+          <Key>
+            <PropertyRef Name="module_id" />
+            <PropertyRef Name="user_name" />
+          </Key>
+          <Property Type="Int16" Name="module_id" Nullable="false" />
+          <Property Type="String" Name="module_name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="data_source_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="login_type" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rets_url" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_agent" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_agent_password" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rets_version" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CleanLogins1">
+          <Key>
+            <PropertyRef Name="module_id" />
+          </Key>
+          <Property Type="String" Name="module_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="mls_name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="data_source_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="login_type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rets_url" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_agent" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="user_agent_password" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="rets_version" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="http_version" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="http_method" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="auth_type" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="mls_vendor">
+          <Key>
+            <PropertyRef Name="mlsid" />
+          </Key>
+          <Property Type="String" Name="mlsid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="modulename" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="moduleid" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="basemlsid" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TCSModelStoreContainer" CdmEntityContainer="TCSEntities">
+          <EntitySetMapping Name="tcs_module_class_settings"><EntityTypeMapping TypeName="TCSModel.tcs_module_class_settings"><MappingFragment StoreEntitySet="tcs_module_class_settings">
+            <ScalarProperty Name="module_id" ColumnName="module_id" />
+            <ScalarProperty Name="connection_name" ColumnName="connection_name" />
+            <ScalarProperty Name="class" ColumnName="class" />
+            <ScalarProperty Name="when_updated" ColumnName="when_updated" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="cma_GetMLSConnection" FunctionName="TCSModel.Store.cma_GetMLSConnection">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TCSModel.cma_GetMLSConnection_Result">
+                <ScalarProperty Name="board_id" ColumnName="board_id" />
+                <ScalarProperty Name="vendor_name" ColumnName="vendor_name" />
+                <ScalarProperty Name="state_name" ColumnName="state_name" />
+                <ScalarProperty Name="board_name" ColumnName="board_name" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+                <ScalarProperty Name="module_name" ColumnName="module_name" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="url_location_path" ColumnName="url_location_path" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="connection_id" ColumnName="connection_id" />
+                <ScalarProperty Name="connection_type" ColumnName="connection_type" />
+                <ScalarProperty Name="connection_name" ColumnName="connection_name" />
+                <ScalarProperty Name="is_login_required" ColumnName="is_login_required" />
+                <ScalarProperty Name="property_sub_type" ColumnName="property_sub_type" />
+                <ScalarProperty Name="type_description" ColumnName="type_description" />
+                <ScalarProperty Name="definition_file" ColumnName="definition_file" />
+                <ScalarProperty Name="when_checked" ColumnName="when_checked" />
+                <ScalarProperty Name="mls_search_order" ColumnName="mls_search_order" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tcs_rets_connection_info">
+            <EntityTypeMapping TypeName="TCSModel.tcs_rets_connection_info">
+              <MappingFragment StoreEntitySet="tcs_rets_connection_info">
+                <ScalarProperty Name="login_url" ColumnName="login_url" />
+                <ScalarProperty Name="ua_password" ColumnName="ua_password" />
+                <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="rdc_code" ColumnName="rdc_code" />
+                <ScalarProperty Name="account_type" ColumnName="account_type" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tcs_mls_metadata_fields">
+            <EntityTypeMapping TypeName="TCSModel.tcs_mls_metadata_fields">
+              <MappingFragment StoreEntitySet="tcs_mls_metadata_fields">
+                <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+                <ScalarProperty Name="class" ColumnName="class" />
+                <ScalarProperty Name="resource" ColumnName="resource" />
+                <ScalarProperty Name="data_type" ColumnName="data_type" />
+                <ScalarProperty Name="maximum_length" ColumnName="maximum_length" />
+                <ScalarProperty Name="standard_name" ColumnName="standard_name" />
+                <ScalarProperty Name="long_name" ColumnName="long_name" />
+                <ScalarProperty Name="system_name" ColumnName="system_name" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+                <ScalarProperty Name="field_id" ColumnName="field_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tcs_standard_result_fields">
+            <EntityTypeMapping TypeName="TCSModel.tcs_standard_result_fields">
+              <MappingFragment StoreEntitySet="tcs_standard_result_fields">
+                <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+                <ScalarProperty Name="def_name" ColumnName="def_name" />
+                <ScalarProperty Name="property_type" ColumnName="property_type" />
+                <ScalarProperty Name="property_class" ColumnName="property_class" />
+                <ScalarProperty Name="system_name" ColumnName="system_name" />
+                <ScalarProperty Name="rets_long_name" ColumnName="rets_long_name" />
+                <ScalarProperty Name="field_name" ColumnName="field_name" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+                <ScalarProperty Name="field_id" ColumnName="field_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PR_tcs_standard_result_fields_GetLongname" FunctionName="TCSModel.Store.PR_tcs_standard_result_fields_GetLongname">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TCSModel.PR_tcs_standard_result_fields_GetLongname_Result">
+                <ScalarProperty Name="field_name" ColumnName="field_name" />
+                <ScalarProperty Name="rets_long_name" ColumnName="rets_long_name" />
+                <ScalarProperty Name="system_name" ColumnName="system_name" />
+                <ScalarProperty Name="num" ColumnName="num" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tcs_clean_loggins">
+            <EntityTypeMapping TypeName="TCSModel.tcs_clean_loggins">
+              <MappingFragment StoreEntitySet="tcs_clean_loggins">
+                <ScalarProperty Name="rets_version" ColumnName="rets_version" />
+                <ScalarProperty Name="user_agent_password" ColumnName="user_agent_password" />
+                <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="rets_url" ColumnName="rets_url" />
+                <ScalarProperty Name="login_type" ColumnName="login_type" />
+                <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+                <ScalarProperty Name="module_name" ColumnName="module_name" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CleanLogins1">
+            <EntityTypeMapping TypeName="TCSModel.CleanLogins1">
+              <MappingFragment StoreEntitySet="CleanLogins1">
+                <ScalarProperty Name="auth_type" ColumnName="auth_type" />
+                <ScalarProperty Name="http_method" ColumnName="http_method" />
+                <ScalarProperty Name="http_version" ColumnName="http_version" />
+                <ScalarProperty Name="rets_version" ColumnName="rets_version" />
+                <ScalarProperty Name="user_agent_password" ColumnName="user_agent_password" />
+                <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="rets_url" ColumnName="rets_url" />
+                <ScalarProperty Name="login_type" ColumnName="login_type" />
+                <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+                <ScalarProperty Name="mls_name" ColumnName="mls_name" />
+                <ScalarProperty Name="module_id" ColumnName="module_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mls_vendor">
+            <EntityTypeMapping TypeName="TCSModel.mls_vendor">
+              <MappingFragment StoreEntitySet="mls_vendor">
+                <ScalarProperty Name="basemlsid" ColumnName="basemlsid" />
+                <ScalarProperty Name="moduleid" ColumnName="moduleid" />
+                <ScalarProperty Name="modulename" ColumnName="modulename" />
+                <ScalarProperty Name="mlsid" ColumnName="mlsid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TCSModel.tcs_module_class_settings" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="TCSModel.tcs_rets_connection_info" Width="4" PointX="8.5" PointY="0.625" Height="2.5571907552083331" />
+        <EntityTypeShape EntityType="TCSModel.tcs_mls_metadata_fields" Width="1.5" PointX="8.5094926061618565" PointY="4.0408225674372273" />
+        <EntityTypeShape EntityType="TCSModel.tcs_standard_result_fields" Width="1.5" PointX="7.125" PointY="7.5" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="TCSModel.tcs_clean_loggins" Width="1.5" PointX="5.375" PointY="3.75" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="TCSModel.CleanLogins1" Width="1.5" PointX="9.375" PointY="7.75" Height="3.5186979166666665" />
+        <EntityTypeShape EntityType="TCSModel.mls_vendor" Width="1.5" PointX="0.75" PointY="0.75" Height="1.7879850260416674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

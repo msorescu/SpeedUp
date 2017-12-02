@@ -1,0 +1,12 @@
+﻿<Window x:Class="SpeedUp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SpeedUp" Height="220" Width="360" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-30" Height="198" VerticalAlignment="Top">
+        <Button Content="Let's Start" Height="37" Margin="107,122,106,0" Name="LetsStart" VerticalAlignment="Top" Click="LetsStart_Click" />
+        <TextBox Height="47" Margin="71,47,58,0" Name="textModuleID" VerticalAlignment="Top" Text="" PreviewMouseDown="textModuleID_PreviewMouseDown"  KeyDown="textModuleID_OnKeyDownHandler" />
+        <Label Content="Module ID, RDC ID or Trace name" Height="28" HorizontalAlignment="Left" Margin="71,21,0,0" Name="label1" VerticalAlignment="Top" Width="209" />
+        <Label Content="For new convert project enter New" Height="28" HorizontalAlignment="Left" Margin="71,89,0,0" x:Name="label1_Copy" VerticalAlignment="Top" Width="209" />
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="12,136,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click_1" />
+    </Grid>
+</Window>

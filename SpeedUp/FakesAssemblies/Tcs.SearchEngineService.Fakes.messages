@@ -1,0 +1,34 @@
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for SearchMlsCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for SearchMlsCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for CreateTaskCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for CreateTaskCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskStatusCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskStatusCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskResultCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskResultCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskProgressCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTaskProgressCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetDefListCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetDefListCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for SetTmkLogModeCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for SetTmkLogModeCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTmkLogCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetTmkLogCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for UpdateMlsBoardsCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for UpdateMlsBoardsCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetMetadataCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetMetadataCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetMLSFieldsAndCriteriaCompletedEventHandler: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for GetMLSFieldsAndCriteriaCompletedEventArgs: type has no family visible contructors.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate stub for Tcs.SearchEngineService.SearchConstants: type is sealed.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for SearchMlsCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for CreateTaskCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetTaskStatusCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetTaskResultCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetTaskProgressCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetDefListCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for SetTmkLogModeCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetTmkLogCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for UpdateMlsBoardsCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetMetadataCompletedEventHandler: type is a delegate.
+C:\TCS\Implementation\Source Code\SpeedUp\SpeedUp\Fakes\Tcs.SearchEngineService.fakes : warning : Cannot generate shim for GetMLSFieldsAndCriteriaCompletedEventHandler: type is a delegate.

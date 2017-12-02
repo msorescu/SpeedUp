@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="spDA_GetDataSourceConfigBasic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="varchar" Mode="In" />
+    <Parameter Name="PROTOCOL" Type="varchar" Mode="In" />
+    <Parameter Name="FILEFORMAT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDA_GetDataSourceID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DSID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDA_ListOfSourceIdsByPropType_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MLSID" Type="varchar" Mode="In" />
+    <Parameter Name="PropTypeId" Type="int" Mode="In" />
+    <Parameter Name="debug" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spDA_RETSConnectionInfo_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MLSID" Type="varchar" Mode="In" />
+    <Parameter Name="debug" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spDA_RETSListingConfig_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDA_RETSLoginInfo_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDA_RETSRosterConfig_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDA_SoldToActiveDataSource_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDA_TCSDatasource_sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TCSModuleID" Type="varchar" Mode="In" />
+    <Parameter Name="Debug" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spDA_TRPCountsByPropType_Sel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MLSID" Type="varchar" Mode="In" />
+    <Parameter Name="debug" Type="bit" Mode="In" />
+  </Function>
+  <EntityContainer Name="SystemModelStoreContainer" />
+</Schema>

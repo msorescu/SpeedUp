@@ -1,0 +1,98 @@
+﻿<Window x:Class="SpeedUp.WorkNow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WorkNow" Height="623" Width="1016" Closed="Window_Closed" WindowStartupLocation="CenterScreen"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid Width="985" Height="568">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="556*" />
+            <RowDefinition Height="12*" />
+        </Grid.RowDefinitions>
+        <Button Content="Open Performance Log on Production" Height="23" HorizontalAlignment="Right" Margin="0,435,0,0" Name="PerformanceLogProduction" VerticalAlignment="Top" Width="219" Click="PerformanceLogProduction_Click" />
+        <Button Content="Open Performance Log on Qa1" Height="23" HorizontalAlignment="Right" Margin="0,435,225,0" Name="PerformanceLogQa1" VerticalAlignment="Top" Width="206" Click="PerformanceLogQa1_Click" />
+        <Label Content="Module ID:" Height="27" HorizontalAlignment="Left" Margin="12,17,0,0" Name="ModuleIDLabel" VerticalAlignment="Top" Width="77" />
+        <Label Content="Module Name:" Height="27" HorizontalAlignment="Left" Margin="183,13,0,0" Name="ModuleNameLabel" VerticalAlignment="Top" Width="87" />
+        <Label Content="Board ID:" Height="25" HorizontalAlignment="Left" Margin="12,48,0,0" Name="BoardIDLabel" VerticalAlignment="Top" Width="75" />
+        <Label Content="RDC Code:" Height="25" HorizontalAlignment="Left" Margin="12,103,0,0" Name="RDCCodeLabel" VerticalAlignment="Top" Width="75" />
+        <Label Content="Trace Name:" HorizontalAlignment="Left" Margin="12,76,0,442" Name="TraceNameLabel" Width="77" />
+        <Button Content="Open In VS" Height="24" HorizontalAlignment="Left" Margin="870,50,0,0" Name="OpenTFS" VerticalAlignment="Top" Width="102" Click="OpenTFS_Click" />
+        <TextBox Height="23" Margin="273,19,0,0" Name="ModuleNameTextBox" VerticalAlignment="Top" PreviewMouseDown="ModuleNameTextBox_PreviewMouseDown" HorizontalAlignment="Left" Width="255" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="86,78,0,0" Name="TraceNameTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="TraceNameTextBox_PreviewMouseDown"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="86,17,0,0" Name="ModuleIDTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="ModuleIDTextBox_PreviewMouseDown"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="86,107,0,0" Name="RDCCodeTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="RDCCodeTextBox_PreviewMouseDown"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="86,48,0,0" Name="BoardIDTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="BoardIDTextBox_PreviewMouseDown"/>
+        <Label Content="Login Name:" Height="27" HorizontalAlignment="Left" Margin="182,46,0,0" Name="LoginNameLabel" VerticalAlignment="Top" Width="108" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,50,623,0" Name="LoginNameTextBox" VerticalAlignment="Top" Width="89" PreviewMouseDown="LoginNameTextBox_PreviewMouseDown"/>
+        <Label Content="Password:" Height="23" HorizontalAlignment="Left" Margin="363,48,0,0" Name="PasswordLabel" VerticalAlignment="Top" Width="96"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="444,48,0,0" Name="PasswordTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="PasswordTextBox_PreviewMouseDown" />
+        <Label Content="Login URL:" Height="32" HorizontalAlignment="Left" Margin="185,105,0,0" Name="LoginURLLabel" VerticalAlignment="Top" Width="85" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="273,107,0,0" Name="LoginURLTextBox" VerticalAlignment="Top" Width="255" PreviewMouseDown="LoginURLTextBox_PreviewMouseDown"/>
+        <Label Content="User Agent:" Height="27" HorizontalAlignment="Left" Margin="185,74,0,0" Name="UserAgentLabel" VerticalAlignment="Top" Width="86" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="273,78,0,0" Name="UserAgentTextBox" VerticalAlignment="Top" Width="89" PreviewMouseDown="UserAgentTextBox_PreviewMouseDown"/>
+        <Label Content="UA Password:" Height="25" HorizontalAlignment="Left" Margin="363,74,0,0" Name="UAPasswordLabel" VerticalAlignment="Top" Width="96" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="444,76,0,0" Name="UAPasswordTextBox" VerticalAlignment="Top" Width="84" PreviewMouseDown="UAPasswordTextBox_PreviewMouseDown"/>
+        <ListView Height="232" HorizontalAlignment="Left" Margin="12,146,0,0" Name="listView1" VerticalAlignment="Top" Width="516"  ItemsSource="{Binding DefFileDataCollection}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" Header="File Name" DisplayMemberBinding="{Binding FileName}" />
+                    <GridViewColumn Width="60" Header="File Size" DisplayMemberBinding="{Binding FileSize}" />
+                    <GridViewColumn Width="80" Header="Board Type" DisplayMemberBinding="{Binding BoardType}" />
+                    <GridViewColumn Width="80" Header="Property Class" DisplayMemberBinding="{Binding PropertyClass}" />
+                    <GridViewColumn Width="50" Header="Version" DisplayMemberBinding="{Binding Version}" />
+                    <GridViewColumn Width="80" Header="Checkout By" DisplayMemberBinding="{Binding CheckoutBy}" />
+                    <GridViewColumn Width="50" Header="Is Latest" DisplayMemberBinding="{Binding IsLatest}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Get MetaData" Height="24" HorizontalAlignment="Left" Margin="553,146,0,0" Name="GetMetadataButton" VerticalAlignment="Top" Width="96" Click="GetMetadataButton_Click" />
+        <TextBox Height="24" HorizontalAlignment="Right" Margin="0,13,122,0" Name="WorkingFolderTextBox" VerticalAlignment="Top" Width="210" PreviewMouseDown="WorkingFolderTextBox_PreviewMouseDown" />
+        <Button Content="Open Folder" Height="24" Margin="870,18,0,0" Name="OpenFolderButton" VerticalAlignment="Top" Click="OpenFolderButton_Click" HorizontalAlignment="Left" Width="102" />
+        <Button Content="Upload Selected Def File(s) to Qa1" Height="24" HorizontalAlignment="Left" Margin="554,346,0,0" Name="UploadDefFileQa1Button" VerticalAlignment="Top" Width="206" Click="UploadDefFileQa1Button_Click" />
+        <Button Content="Generate DataAgg Request 200 recs" Height="24" HorizontalAlignment="Left" Margin="14,384,0,0" Name="GenerateDataAggRequestButton" VerticalAlignment="Top" Width="207" Click="GenerateDataAggRequestButton_Click" LostFocus="GenerateDataAggRequestButton_LostFocus"/>
+        <Button Content="Get Sample Data" Height="24" HorizontalAlignment="Left" Margin="553,177,0,0" Name="GetSampleDataButton" VerticalAlignment="Top" Width="96" Click="GetSampleDataButton_Click" />
+        <Button Content="Open MetaData" Height="24" HorizontalAlignment="Left" Margin="655,146,0,0" Name="OpenMetaDataButton" VerticalAlignment="Top" Width="96" Click="OpenMetaDataButton_Click" />
+        <Button Content="Open Sam Data" Height="24" HorizontalAlignment="Left" Margin="655,177,0,0" Name="OpenSampleDataButton" VerticalAlignment="Top" Width="96" Click="OpenSampleData_Click" />
+        <Button Content="Open Meta Log" Height="24" HorizontalAlignment="Left" Margin="757,146,0,0" Name="OpenMetaDataLogButton" VerticalAlignment="Top" Width="96" Click="OpenMetaDataLogButton_Click" />
+        <Button Content="Open Sam Log" Height="24" HorizontalAlignment="Left" Margin="757,177,0,0" Name="OpenSampleDataLogButton" VerticalAlignment="Top" Width="96" Click="OpenSampleDataLogButton_Click" />
+        <Button Content="Reply Email" Height="24" HorizontalAlignment="Left" Margin="713,496,0,0" Name="ReplyEmailButton" VerticalAlignment="Top" Width="207" Click="ReplyEmailButton_Click" Visibility="Hidden"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="655,207,0,0" Name="MlsNumberTextBox" VerticalAlignment="Top" Width="198" />
+        <Label Content="MLS Number:" Height="24" HorizontalAlignment="Left" Margin="553,205,0,0" Name="label1" VerticalAlignment="Top" Width="96" />
+        <Button Content="Add Comment To Selected Defs" Height="24" HorizontalAlignment="Left" Margin="554,286,0,0" Name="AddCommentButton" VerticalAlignment="Top" Width="206" Click="AddCommentButton_Click" />
+        <Button Content="Increase Version Number for All Defs" Height="24" HorizontalAlignment="Right" Margin="0,286,0,0" Name="IncreaseVersionButton" VerticalAlignment="Top" Width="219" Click="IncreaseVersionButton_Click" />
+        <TextBox Height="45" HorizontalAlignment="Left" Margin="553,236,0,0" Name="CommentTextBox"  ToolTip="Comments"  VerticalAlignment="Top" Width="300" TextWrapping="Wrap"/>
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="14,496,0,0" Name="DownloadFileTextBox" VerticalAlignment="Top" Width="261" />
+        <Button Content="Download File to C:\TCSDownload" Height="24" HorizontalAlignment="Left" Margin="281,495,0,0" Name="DownLoadFileButton" VerticalAlignment="Top" Width="247" Click="DownLoadFileButton_Click" />
+        <Button Content="Reset Defs from CSS on Qa1" HorizontalAlignment="Left" Height="24" Margin="554,316,0,216" Name="ResetDefQa1Button" Width="206" Click="ResetDefQa1Button_Click" />
+        <Button Content="Reset Defs from CSS on Production" Height="24" HorizontalAlignment="Right" Margin="0,316,0,0" Name="ResetDefProductionButton" VerticalAlignment="Top" Width="219" Click="ResetDefProductionButton_Click" />
+        <Button Content="Open Standard Field Xls" Height="24" HorizontalAlignment="Left" Margin="13,532,0,0" Name="OpenStandardFieldDocButton" VerticalAlignment="Top" Width="144" Click="OpenStandardFieldDocButton_Click" />
+        <Button Content="Publish Categorization to Qa1" Height="24" HorizontalAlignment="Left" Margin="554,405,0,127" Name="PublishCategorizationToQa1Button" Width="206" Click="PublishCategorizationToQa1Button_Click" />
+        <Button Content="Publish Categorization to Production" Height="24" HorizontalAlignment="Left" Margin="766,405,0,127" Name="PublishCategorizationToProductionButton" Width="219" Click="PublishCategorizationToProductionButton_Click" />
+        <Label Content="TFS Local Folder:" Height="24" HorizontalAlignment="Left" Margin="553,15,0,0" Name="label2" VerticalAlignment="Top" Width="103" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,47,121,0" Name="TFSLocationTextBox" VerticalAlignment="Top" Width="211" PreviewMouseDown="TFSLocationTextBox_PreviewMouseDown"/>
+        <Label Content="TFS Source Path:" Height="24" HorizontalAlignment="Left" Margin="553,45,0,0" Name="TFSLocationLabel" VerticalAlignment="Top" Width="103" />
+        <Button Content="Open TCS Result" Height="24" HorizontalAlignment="Left" Margin="859,177,0,0" Name="OpenTCSResultButton" VerticalAlignment="Top" Width="113" Click="OpenTCSResultButton_Click" />
+        <Button Content="Setting" Height="24" HorizontalAlignment="Right" Margin="0,495,324,0" Name="SettingButton" VerticalAlignment="Top" Width="95" Click="SettingButton_Click" />
+        <Button Content="Retrieve Categorization from Qa1" Height="24" HorizontalAlignment="Left" Margin="554,376,0,156" Name="RetrieveCategorizationFromQa1Button" Width="206" Click="RetrieveCategorizationFromQa1Button_Click" />
+        <Button Content="Retrieve Categorization from Production" Height="24" HorizontalAlignment="Right" Margin="0,376,0,156" Name="RetrieveCategorizationFromProductionButton" Width="219" Click="RetrieveCategorizationFromProductionButton_Click" />
+        <Button Content="Generate DataAgg Request All recs" Height="24" HorizontalAlignment="Right" Margin="0,384,552,0" Name="GenerateDataAggRequestAllButton" VerticalAlignment="Top" Width="206" Click="GenerateDataAggRequestAllButton_Click" />
+        <Button Content="Launch RETS Client Tool" Height="24" HorizontalAlignment="Left" Margin="14,443,0,0" Name="LaunchRETSClientToolButton" VerticalAlignment="Top" Width="208" Click="LaunchRETSClientToolButton_Click" />
+        <Button Content="Launch Handy Mapper" Height="24" HorizontalAlignment="Left" Margin="14,413,0,0" Name="LaunchHandyMapperButton" VerticalAlignment="Top" Width="208" Click="LaunchHandyMapperButton_Click" />
+        <Button Content="Launch Search Mapper" Height="24" HorizontalAlignment="Left" Margin="227,413,0,0" Name="LaunchSearchToolButton" VerticalAlignment="Top" Width="206" Click="LaunchSearchToolButton_Click" />
+        <Button Content="Launch Test Harness" Height="24" HorizontalAlignment="Left" Margin="227,443,0,0" Name="LaunchTesetHarnessButton" VerticalAlignment="Top" Width="206" Click="LaunchTesetHarnessButton_Click" />
+        <Button Content="Open Orca Data Source Active Xls" Height="24" HorizontalAlignment="Left" Margin="163,532,0,0" Name="OpenOrcaDataSourceActiveButton" VerticalAlignment="Top" Width="193" Click="OpenOrcaDataSourceActiveButton_Click" />
+        <Label Content="Download data file from Production, Staging or Qa1 server" Height="28" HorizontalAlignment="Left" Margin="13,473,0,0" Name="label3" VerticalAlignment="Top" Width="353" />
+        <Button Content="Open TCS URL Link Page" Height="24" HorizontalAlignment="Right" Margin="0,532,451,0" Name="OpenTCSURLLinkPageButton" VerticalAlignment="Top" Width="166" Click="OpenTCSURLLinkPageButton_Click" />
+        <Button Content="Release DEF files to CSS Production" Height="24" HorizontalAlignment="Left" Margin="766,346,0,186" Name="ReleaseDEFFilesButton" Width="219" Click="ReleaseDEFFilesButton_Click" />
+        <Button Content="Collect TimeZone Info" Height="24" HorizontalAlignment="Left" Margin="554,525,0,0" Name="CollectTimeZoneInfoButton" VerticalAlignment="Top" Width="141" Click="CollectTimeZoneInfoButton_Click" Visibility="Hidden" />
+        <Button Content="Check Out" Height="24" HorizontalAlignment="Right" Margin="0,78,122,0" Name="CheckOutButton" VerticalAlignment="Top" Width="105" Click="CheckOutButton_Click" />
+        <Button Content="Check In" Height="24" HorizontalAlignment="Left" Margin="870,107,0,0" Name="CheckInButton" VerticalAlignment="Top" Width="102" Click="CheckInButton_Click" />
+        <Button Content="Get Latest Verion" Height="24" HorizontalAlignment="Left" Margin="653,78,0,0" Name="GetLatestVersionButton" VerticalAlignment="Top" Width="100" Click="GetLatestVersionButton_Click" />
+        <Button Content="Undo Checkout" Height="24" HorizontalAlignment="Left" Margin="870,78,0,0" Name="UndoCheckoutButton" VerticalAlignment="Top" Width="102" Click="UndoCheckoutButton_Click" />
+        <TextBox Height="24" HorizontalAlignment="Right" Margin="0,109,122,0" Name="CheckInCommentsTextBox" VerticalAlignment="Top" Width="210" />
+        <Label Content="Comments:" Height="24" HorizontalAlignment="Left" Margin="553,107,0,0" Name="label4" VerticalAlignment="Top" Width="96" />
+        <Button Content="Run Search Request" Height="24" HorizontalAlignment="Left" Margin="859,257,0,0" Name="RunRequestButton" VerticalAlignment="Top" Width="126" Click="RunRequestButton_Click" />
+        <Button Content="Get All Sample Data" Height="24" HorizontalAlignment="Left" Margin="859,146,0,0" Name="GetAllSampleDataButton" VerticalAlignment="Top" Width="114" Click="GetAllSampleDataButton_Click" />
+        <CheckBox Content="Include RETS Blob" Height="16" HorizontalAlignment="Left" Margin="860,212,0,0" Name="IncludeRETSBlobCheckBox" VerticalAlignment="Top" />
+        <Button Content="Test" Height="24" HorizontalAlignment="Right" Margin="0,496,180,0" Name="TestButton" VerticalAlignment="Top" Width="95" Click="TestButton_Click" Visibility="Hidden" />
+    </Grid>
+</Window>

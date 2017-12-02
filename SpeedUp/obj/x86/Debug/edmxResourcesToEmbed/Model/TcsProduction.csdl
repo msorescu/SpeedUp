@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCSModelProduction" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TCSEntitiesProduction" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tcs_error_log" EntityType="TCSModelProduction.tcs_error_log" />
+    <EntitySet Name="tcs_request_log" EntityType="TCSModelProduction.tcs_request_log" />
+    <AssociationSet Name="FK_LOG_HAS_ERROR" Association="TCSModelProduction.FK_LOG_HAS_ERROR">
+      <End Role="tcs_request_log" EntitySet="tcs_request_log" />
+      <End Role="tcs_error_log" EntitySet="tcs_error_log" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tcs_error_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Name="request_id" Type="Int64" Nullable="false" />
+    <Property Name="error_code" Type="Int32" Nullable="false" />
+    <Property Name="error_type" Type="Int16" Nullable="false" />
+    <Property Name="error_msg" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tcs_request_log" Relationship="TCSModelProduction.FK_LOG_HAS_ERROR" FromRole="tcs_error_log" ToRole="tcs_request_log" />
+  </EntityType>
+  <EntityType Name="tcs_request_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Type="DateTime" Name="when_created" Nullable="false" />
+    <Property Type="Int64" Name="request_id" Nullable="false" />
+    <Property Type="Int16" Name="board_id" Nullable="false" />
+    <Property Type="String" Name="request_xml" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="function_id" Nullable="false" />
+    <Property Type="String" Name="location_path" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="web_server" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mls_user_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="zip" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="client_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="client_task_ref" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcs_error_log" Relationship="TCSModelProduction.FK_LOG_HAS_ERROR" FromRole="tcs_request_log" ToRole="tcs_error_log" />
+  </EntityType>
+  <Association Name="FK_LOG_HAS_ERROR">
+    <End Type="TCSModelProduction.tcs_request_log" Role="tcs_request_log" Multiplicity="1" />
+    <End Type="TCSModelProduction.tcs_error_log" Role="tcs_error_log" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tcs_request_log">
+        <PropertyRef Name="request_id" />
+      </Principal>
+      <Dependent Role="tcs_error_log">
+        <PropertyRef Name="request_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

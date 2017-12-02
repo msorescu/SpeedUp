@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TCSModelStoreContainer">
+    <EntitySet Name="cma_mls_board_connections" EntityType="TCSModel.Store.cma_mls_board_connections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cma_mls_boards" EntityType="TCSModel.Store.cma_mls_boards" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cma_mls_modules" EntityType="TCSModel.Store.cma_mls_modules" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_indexed_datasources" EntityType="TCSModel.Store.tcs_indexed_datasources" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_mls_metadata_fields" EntityType="TCSModel.Store.tcs_mls_metadata_fields" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_module_class_settings" EntityType="TCSModel.Store.tcs_module_class_settings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_module_id_to_data_source_id" EntityType="TCSModel.Store.tcs_module_id_to_data_source_id" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_rets_connection_info" EntityType="TCSModel.Store.tcs_rets_connection_info" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_standard_result_fields" EntityType="TCSModel.Store.tcs_standard_result_fields" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_timezone" EntityType="TCSModel.Store.tcs_timezone" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CLASS_SETTINGS_HAS_MODULE" Association="TCSModel.Store.FK_CLASS_SETTINGS_HAS_MODULE">
+      <End Role="cma_mls_modules" EntitySet="cma_mls_modules" />
+      <End Role="tcs_module_class_settings" EntitySet="tcs_module_class_settings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tcs_indexed_datasources_cma_mls_modules" Association="TCSModel.Store.FK_tcs_indexed_datasources_cma_mls_modules">
+      <End Role="cma_mls_modules" EntitySet="cma_mls_modules" />
+      <End Role="tcs_indexed_datasources" EntitySet="tcs_indexed_datasources" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cma_mls_board_connections">
+    <Key>
+      <PropertyRef Name="connection_id" />
+    </Key>
+    <Property Name="board_id" Type="smallint" />
+    <Property Name="connection_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="definition_file" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="connection_type" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="connection_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="version" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="when_checked" Type="datetime" Nullable="false" />
+    <Property Name="is_login_required" Type="smallint" Nullable="false" />
+    <Property Name="connection_status_id" Type="smallint" Nullable="false" />
+    <Property Name="content_xml" Type="ntext" />
+  </EntityType>
+  <EntityType Name="cma_mls_boards">
+    <Key>
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="board_id" />
+    </Key>
+    <Property Name="language_id" Type="smallint" Nullable="false" />
+    <Property Name="board_id" Type="smallint" Nullable="false" />
+    <Property Name="board_name" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="vendor_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="state_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="url_location_path" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="board_status_id" Type="smallint" Nullable="false" />
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cma_mls_modules">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="module_name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="tcs_indexed_datasources">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="when_created" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tcs_mls_metadata_fields">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="system_name" />
+      <PropertyRef Name="resource" />
+      <PropertyRef Name="class" />
+    </Key>
+    <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="system_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="long_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="standard_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="maximum_length" Type="int" />
+    <Property Name="data_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="resource" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="class" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="resource_type" Type="int" />
+  </EntityType>
+  <EntityType Name="tcs_module_class_settings">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="connection_name" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="connection_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="class" Type="nvarchar" MaxLength="64" />
+    <Property Name="when_updated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tcs_module_id_to_data_source_id">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="data_source_id" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="data_source_id" Type="nchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="tcs_rets_connection_info">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="account_type" />
+      <PropertyRef Name="rdc_code" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="account_type" Type="int" Nullable="false" />
+    <Property Name="rdc_code" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_agent" Type="nvarchar" MaxLength="50" />
+    <Property Name="ua_password" Type="nvarchar" MaxLength="50" />
+    <Property Name="login_url" Type="nchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tcs_standard_result_fields">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="field_name" />
+      <PropertyRef Name="rets_long_name" />
+    </Key>
+    <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="field_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="rets_long_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="system_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="property_class" Type="nvarchar" MaxLength="100" />
+    <Property Name="property_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="def_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="resource_type" Type="int" />
+  </EntityType>
+  <EntityType Name="tcs_timezone">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="timezone_search" Type="nvarchar" MaxLength="100" />
+    <Property Name="timezone_result" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_CLASS_SETTINGS_HAS_MODULE">
+    <End Role="cma_mls_modules" Type="TCSModel.Store.cma_mls_modules" Multiplicity="1" />
+    <End Role="tcs_module_class_settings" Type="TCSModel.Store.tcs_module_class_settings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cma_mls_modules">
+        <PropertyRef Name="module_id" />
+      </Principal>
+      <Dependent Role="tcs_module_class_settings">
+        <PropertyRef Name="module_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tcs_indexed_datasources_cma_mls_modules">
+    <End Role="cma_mls_modules" Type="TCSModel.Store.cma_mls_modules" Multiplicity="1" />
+    <End Role="tcs_indexed_datasources" Type="TCSModel.Store.tcs_indexed_datasources" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cma_mls_modules">
+        <PropertyRef Name="module_id" />
+      </Principal>
+      <Dependent Role="tcs_indexed_datasources">
+        <PropertyRef Name="module_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="cma_GetMLSConnection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="board_id" Type="smallint" Mode="In" />
+    <Parameter Name="connection_type" Type="nvarchar" Mode="In" />
+    <Parameter Name="connection_name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PR_tcs_standard_result_fields_GetLongname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tcs_standard_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="vendor_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="resource_type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="tcs_GetBoardID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="module_id" Type="smallint" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SystemModelStoreContainer" CdmEntityContainer="SystemEntities">
+    <FunctionImportMapping FunctionImportName="spDA_RETSConnectionInfo_sel" FunctionName="SystemModel.Store.spDA_RETSConnectionInfo_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_RETSConnectionInfo_sel_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_TCSDatasource_sel" FunctionName="SystemModel.Store.spDA_TCSDatasource_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_TCSDatasource_sel_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_GetDataSourceConfigBasic" FunctionName="SystemModel.Store.spDA_GetDataSourceConfigBasic">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_GetDataSourceConfigBasic_Result">
+          <ScalarProperty Name="AggregationSubType" ColumnName="AGGREGATIONSUBTYPE" />
+          <ScalarProperty Name="AggregationType" ColumnName="AGGREGATIONTYPE" />
+          <ScalarProperty Name="ProtocolInfo" ColumnName="ProtocolInfo" />
+          <ScalarProperty Name="FileFormatInfo" ColumnName="FileFormatInfo" />
+          <ScalarProperty Name="DATASOURCECONFIGID" ColumnName="DATASOURCECONFIGID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_RETSLoginInfo_sel" FunctionName="SystemModel.Store.spDA_RETSLoginInfo_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_RETSLoginInfo_sel_Result">
+          <ScalarProperty Name="mls_name" ColumnName="mls_name" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="login_type" ColumnName="login_type" />
+          <ScalarProperty Name="rets_url" ColumnName="rets_url" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="user_agent_password" ColumnName="user_agent_password" />
+          <ScalarProperty Name="rets_version" ColumnName="rets_version" />
+          <ScalarProperty Name="http_version" ColumnName="http_version" />
+          <ScalarProperty Name="http_method" ColumnName="http_method" />
+          <ScalarProperty Name="auth_type" ColumnName="auth_type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_RETSListingConfig_sel" FunctionName="SystemModel.Store.spDA_RETSListingConfig_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_RETSListingConfig_sel_Result">
+          <ScalarProperty Name="mls_name" ColumnName="mls_name" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+          <ScalarProperty Name="resource" ColumnName="resource" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="search_limit" ColumnName="search_limit" />
+          <ScalarProperty Name="search_format" ColumnName="search_format" />
+          <ScalarProperty Name="count_records_active" ColumnName="count_records_active" />
+          <ScalarProperty Name="count_records_sold" ColumnName="count_records_sold" />
+          <ScalarProperty Name="count_records_offmarket" ColumnName="count_records_offmarket" />
+          <ScalarProperty Name="last_modified_date_field" ColumnName="last_modified_date_field" />
+          <ScalarProperty Name="key_field" ColumnName="key_field" />
+          <ScalarProperty Name="sold_date_field" ColumnName="sold_date_field" />
+          <ScalarProperty Name="status_active_dqml_query" ColumnName="status_active_dqml_query" />
+          <ScalarProperty Name="status_sold_dqml_query" ColumnName="status_sold_dqml_query" />
+          <ScalarProperty Name="status_offmarket_dqml_query" ColumnName="status_offmarket_dqml_query" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_RETSRosterConfig_sel" FunctionName="SystemModel.Store.spDA_RETSRosterConfig_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_RETSRosterConfig_sel_Result">
+          <ScalarProperty Name="mls_name" ColumnName="mls_name" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+          <ScalarProperty Name="resource" ColumnName="resource" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="search_limit" ColumnName="search_limit" />
+          <ScalarProperty Name="search_format" ColumnName="search_format" />
+          <ScalarProperty Name="count_records_active" ColumnName="count_records_active" />
+          <ScalarProperty Name="last_modified_date_field" ColumnName="last_modified_date_field" />
+          <ScalarProperty Name="key_field" ColumnName="key_field" />
+          <ScalarProperty Name="status_active_dqml_query" ColumnName="status_active_dqml_query" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_GetDataSourceID" FunctionName="SystemModel.Store.spDA_GetDataSourceID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_GetDataSourceID">
+          <ScalarProperty Name="DATASOURCEID" ColumnName="DATASOURCEID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_SoldToActiveDataSource_sel" FunctionName="SystemModel.Store.spDA_SoldToActiveDataSource_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_SoldToActiveDataSource_sel_Result">
+          <ScalarProperty Name="sold_data_source_id" ColumnName="sold_data_source_id" />
+          <ScalarProperty Name="sold_mls_name" ColumnName="sold_mls_name" />
+          <ScalarProperty Name="main_data_source_id" ColumnName="main_data_source_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

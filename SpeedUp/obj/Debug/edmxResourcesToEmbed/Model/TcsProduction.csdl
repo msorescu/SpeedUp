@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCSModelProduction" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="TCSEntitiesProduction" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <EntitySet Name="tcs_error_log" EntityType="TCSModelProduction.tcs_error_log" />
+    <EntitySet Name="tcs_request_log" EntityType="TCSModelProduction.tcs_request_log" />
+    <AssociationSet Name="FK_LOG_HAS_ERROR" Association="TCSModelProduction.FK_LOG_HAS_ERROR">
+      <End Role="tcs_request_log" EntitySet="tcs_request_log" />
+      <End Role="tcs_error_log" EntitySet="tcs_error_log" />
+    </AssociationSet>
+    <EntitySet Name="cma_mls_board_connections" EntityType="TCSModelProduction.cma_mls_board_connections" />
+    <EntitySet Name="cma_mls_boards" EntityType="TCSModelProduction.cma_mls_boards" />
+    <EntitySet Name="cma_mls_modules" EntityType="TCSModelProduction.cma_mls_modules" />
+    <EntitySet Name="tcs_indexed_datasources" EntityType="TCSModelProduction.tcs_indexed_datasources" />
+    <AssociationSet Name="FK_tcs_indexed_datasources_cma_mls_modules" Association="TCSModelProduction.FK_tcs_indexed_datasources_cma_mls_modules">
+      <End Role="cma_mls_modules" EntitySet="cma_mls_modules" />
+      <End Role="tcs_indexed_datasources" EntitySet="tcs_indexed_datasources" />
+    </AssociationSet>
+    <EntitySet Name="tcs_module_id_to_data_source_id" EntityType="TCSModelProduction.tcs_module_id_to_data_source_id" />
+    <FunctionImport Name="tcs_GetBoardID" ReturnType="Collection(TCSModelProduction.tcs_GetBoardID_Result)">
+      <Parameter Name="module_id" Mode="In" Type="Int16" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="tcs_error_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Name="request_id" Type="Int64" Nullable="false" />
+    <Property Name="error_code" Type="Int32" Nullable="false" />
+    <Property Name="error_type" Type="Int16" Nullable="false" />
+    <Property Name="error_msg" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tcs_request_log" Relationship="TCSModelProduction.FK_LOG_HAS_ERROR" FromRole="tcs_error_log" ToRole="tcs_request_log" />
+  </EntityType>
+  <EntityType Name="tcs_request_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Type="DateTime" Name="when_created" Nullable="false" />
+    <Property Type="Int64" Name="request_id" Nullable="false" />
+    <Property Type="Int16" Name="board_id" Nullable="false" />
+    <Property Type="String" Name="request_xml" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="function_id" Nullable="false" />
+    <Property Type="String" Name="location_path" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="web_server" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="mls_user_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="zip" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="client_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="client_task_ref" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcs_error_log" Relationship="TCSModelProduction.FK_LOG_HAS_ERROR" FromRole="tcs_request_log" ToRole="tcs_error_log" />
+  </EntityType>
+  <Association Name="FK_LOG_HAS_ERROR">
+    <End Type="TCSModelProduction.tcs_request_log" Role="tcs_request_log" Multiplicity="1" />
+    <End Type="TCSModelProduction.tcs_error_log" Role="tcs_error_log" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tcs_request_log">
+        <PropertyRef Name="request_id" />
+      </Principal>
+      <Dependent Role="tcs_error_log">
+        <PropertyRef Name="request_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="cma_mls_board_connections">
+    <Key>
+      <PropertyRef Name="connection_id" />
+    </Key>
+    <Property Type="Int16" Name="board_id" />
+    <Property Type="Guid" Name="connection_id" Nullable="false" />
+    <Property Type="String" Name="definition_file" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="connection_type" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="connection_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="version" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="when_checked" Nullable="false" />
+    <Property Type="Int16" Name="is_login_required" Nullable="false" />
+    <Property Type="Int16" Name="connection_status_id" Nullable="false" />
+    <Property Type="String" Name="content_xml" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="cma_mls_boards">
+    <Key>
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="board_id" />
+    </Key>
+    <Property Type="Int16" Name="language_id" Nullable="false" />
+    <Property Type="Int16" Name="board_id" Nullable="false" />
+    <Property Type="String" Name="board_name" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="vendor_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="state_name" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="type" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="url_location_path" Nullable="false" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="board_status_id" Nullable="false" />
+    <Property Type="Int16" Name="module_id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cma_mls_modules">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Type="Int16" Name="module_id" Nullable="false" />
+    <Property Type="String" Name="module_name" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tcs_indexed_datasources" Relationship="TCSModelProduction.FK_tcs_indexed_datasources_cma_mls_modules" FromRole="cma_mls_modules" ToRole="tcs_indexed_datasources" />
+  </EntityType>
+  <EntityType Name="tcs_indexed_datasources">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Type="Int16" Name="module_id" Nullable="false" />
+    <Property Type="DateTime" Name="when_created" />
+    <NavigationProperty Name="cma_mls_modules" Relationship="TCSModelProduction.FK_tcs_indexed_datasources_cma_mls_modules" FromRole="tcs_indexed_datasources" ToRole="cma_mls_modules" />
+  </EntityType>
+  <Association Name="FK_tcs_indexed_datasources_cma_mls_modules">
+    <End Type="TCSModelProduction.cma_mls_modules" Role="cma_mls_modules" Multiplicity="1" />
+    <End Type="TCSModelProduction.tcs_indexed_datasources" Role="tcs_indexed_datasources" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="cma_mls_modules">
+        <PropertyRef Name="module_id" />
+      </Principal>
+      <Dependent Role="tcs_indexed_datasources">
+        <PropertyRef Name="module_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="tcs_module_id_to_data_source_id">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="data_source_id" />
+    </Key>
+    <Property Type="Int16" Name="module_id" Nullable="false" />
+    <Property Type="String" Name="data_source_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="data_source_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="login_name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="password" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="user_agent" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ua_password" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="is_open_house_only" />
+    <Property Type="String" Name="residential_class" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="data_source_type" />
+    <Property Type="DateTime" Name="last_modified" />
+  </EntityType>
+  <ComplexType Name="tcs_GetBoardID_Result">
+    <Property Type="Int16" Name="board_id" Nullable="false" />
+  </ComplexType>
+</Schema>

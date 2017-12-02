@@ -1,0 +1,22 @@
+﻿<Window x:Class="SpeedUp.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Setting" Height="475" Width="534" WindowStartupLocation="CenterScreen" Closing="OnClosing">
+    <Grid Width="510">
+        <Label Content="TFS Local Folder" Height="24" HorizontalAlignment="Left" Margin="0,27,0,0" Name="UpdateLocalFolderLabel" VerticalAlignment="Top" Width="147" />
+        <TextBox Height="23" Margin="153,27,12,0" Name="TFSLocalFolderTextBox" VerticalAlignment="Top" />
+        <TextBox Height="63" Margin="153,71,12,0" Name="ReplyEmailTemplateTextBox" VerticalAlignment="Top" TextWrapping="Wrap" AcceptsReturn="True"  />
+        <Label Content="Reply Email Template" Height="24" HorizontalAlignment="Left" Margin="0,92,0,0" Name="UpdateEmailTemplateLabel" VerticalAlignment="Top" Width="147"/>
+        <Label Content="e.g.-- C:\Work\rootR9\TCDEF\TCDEF_a.1_Main" Height="28" Margin="153,0,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="266" />
+        <TextBox Height="23" Margin="153,240,12,0" Name="SearchMapperTextBox" VerticalAlignment="Top" />
+        <TextBox Height="23" Margin="153,196,12,0" Name="HandyMapperLocationTextBox" VerticalAlignment="Top" />
+        <TextBox Height="23" Margin="153,153,12,0" Name="RETSClientToolLocationTextBox" VerticalAlignment="Top" />
+        <Label Content="Handy Mapper Location" Height="24" HorizontalAlignment="Left" Margin="0,196,0,0" Name="Lable1" VerticalAlignment="Top" Width="147" />
+        <Label Content="RETS Client Tool Location" Height="24" HorizontalAlignment="Left" Margin="0,151,0,0" Name="Label2" VerticalAlignment="Top" Width="147" />
+        <Label Content="Search Mapper Loaction" Height="24" HorizontalAlignment="Left" Margin="0,238,0,0" Name="Label3" VerticalAlignment="Top" Width="147" />
+        <Button Content="Update" Height="31" HorizontalAlignment="Left" Margin="194,348,0,0" Name="UpdateButton" VerticalAlignment="Top" Width="129" Click="UpdateButton_Click" />
+        <Label Content="Test Harness Loaction" Height="24" HorizontalAlignment="Left" Margin="0,279,0,0" Name="label4" VerticalAlignment="Top" Width="147" />
+        <TextBox Height="23" Margin="153,281,12,0" Name="TestHarnessTextBox" VerticalAlignment="Top" />
+        <Label Content="Version: 2.7.0" Height="24" HorizontalAlignment="Left" Margin="0,400,0,0" Name="label5" VerticalAlignment="Top" Width="204" />
+    </Grid>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="SpeedUp.PendingStatusAnalysis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pending Status Analysis" Height="300" Width="300">
+    <Grid Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Generate Pending status gap report" Name="GenerteGapReport" Grid.Row="0" Grid.Column="0" Click="GenerteGapReport_OnClick"></Button>
+    </Grid>
+    
+</Window>

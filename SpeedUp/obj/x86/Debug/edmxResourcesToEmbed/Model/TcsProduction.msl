@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCSModelProductionStoreContainer" CdmEntityContainer="TCSEntitiesProduction">
+    <EntitySetMapping Name="tcs_error_log">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_error_log">
+        <MappingFragment StoreEntitySet="tcs_error_log">
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="error_code" ColumnName="error_code" />
+          <ScalarProperty Name="error_type" ColumnName="error_type" />
+          <ScalarProperty Name="error_msg" ColumnName="error_msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_request_log">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_request_log">
+        <MappingFragment StoreEntitySet="tcs_request_log">
+          <ScalarProperty Name="client_task_ref" ColumnName="client_task_ref" />
+          <ScalarProperty Name="client_name" ColumnName="client_name" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="mls_user_name" ColumnName="mls_user_name" />
+          <ScalarProperty Name="web_server" ColumnName="web_server" />
+          <ScalarProperty Name="location_path" ColumnName="location_path" />
+          <ScalarProperty Name="function_id" ColumnName="function_id" />
+          <ScalarProperty Name="request_xml" ColumnName="request_xml" />
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="when_created" ColumnName="when_created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

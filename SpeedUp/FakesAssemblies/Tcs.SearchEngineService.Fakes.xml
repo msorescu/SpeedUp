@@ -1,0 +1,1085 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tcs.SearchEngineService.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Global.Fakes.ShimCreateTaskCompletedEventArgs">
+            <summary>Shim type of CreateTaskCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimCreateTaskCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimCreateTaskCompletedEventArgs.#ctor(CreateTaskCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimCreateTaskCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimCreateTaskCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimCreateTaskCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimCreateTaskCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of CreateTaskCompletedEventArgs.CreateTaskCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimCreateTaskCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of CreateTaskCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimCreateTaskCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimCreateTaskCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of CreateTaskCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetDefListCompletedEventArgs">
+            <summary>Shim type of GetDefListCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetDefListCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetDefListCompletedEventArgs.#ctor(GetDefListCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetDefListCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetDefListCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetDefListCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetDefListCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetDefListCompletedEventArgs.GetDefListCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetDefListCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetDefListCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetDefListCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetDefListCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetDefListCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs">
+            <summary>Shim type of GetMLSFieldsAndCriteriaCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.#ctor(GetMLSFieldsAndCriteriaCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetMLSFieldsAndCriteriaCompletedEventArgs.GetMLSFieldsAndCriteriaCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetMLSFieldsAndCriteriaCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMLSFieldsAndCriteriaCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetMLSFieldsAndCriteriaCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetMetadataCompletedEventArgs">
+            <summary>Shim type of GetMetadataCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMetadataCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMetadataCompletedEventArgs.#ctor(GetMetadataCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMetadataCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetMetadataCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMetadataCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMetadataCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetMetadataCompletedEventArgs.GetMetadataCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMetadataCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetMetadataCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetMetadataCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetMetadataCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetMetadataCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskProgressCompletedEventArgs">
+            <summary>Shim type of GetTaskProgressCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.#ctor(GetTaskProgressCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetTaskProgressCompletedEventArgs.GetTaskProgressCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetTaskProgressCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskProgressCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetTaskProgressCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskResultCompletedEventArgs">
+            <summary>Shim type of GetTaskResultCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskResultCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskResultCompletedEventArgs.#ctor(GetTaskResultCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskResultCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskResultCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskResultCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskResultCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetTaskResultCompletedEventArgs.GetTaskResultCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskResultCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetTaskResultCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskResultCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskResultCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetTaskResultCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskStatusCompletedEventArgs">
+            <summary>Shim type of GetTaskStatusCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.#ctor(GetTaskStatusCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetTaskStatusCompletedEventArgs.GetTaskStatusCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetTaskStatusCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTaskStatusCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetTaskStatusCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTmkLogCompletedEventArgs">
+            <summary>Shim type of GetTmkLogCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTmkLogCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTmkLogCompletedEventArgs.#ctor(GetTmkLogCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTmkLogCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimGetTmkLogCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTmkLogCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTmkLogCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of GetTmkLogCompletedEventArgs.GetTmkLogCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTmkLogCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of GetTmkLogCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimGetTmkLogCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimGetTmkLogCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of GetTmkLogCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimMls">
+            <summary>Shim type of Mls</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.#ctor(Mls)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimMls.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginCreateTaskStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginCreateTask(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetDefListStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetDefList(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetMLSFieldsAndCriteriaStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetMLSFieldsAndCriteria(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetMetadataStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetMetadata(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetTaskProgressStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskProgress(String i_sMessageHeader, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetTaskResultStringStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskResult(String i_sMessageHeader, String objectID, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetTaskStatusStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskStatus(String i_sMessageHeader, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginGetTmkLogAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTmkLog(AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginSearchMlsStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginSearchMls(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginSetTmkLogModeStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginSetTmkLogMode(String logOn, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.BeginUpdateMlsBoardsXmlNodeArrayAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginUpdateMlsBoards(XmlNode[] xmlRequest, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CancelAsyncObject">
+            <summary>Sets the shim of Mls.CancelAsync(Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.ConstructorString">
+            <summary>Sets the shim of Mls.Mls(String url)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CreateTaskAsyncString">
+            <summary>Sets the shim of Mls.CreateTaskAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CreateTaskAsyncStringObject">
+            <summary>Sets the shim of Mls.CreateTaskAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CreateTaskCompletedAddCreateTaskCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_CreateTaskCompleted(CreateTaskCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CreateTaskCompletedRemoveCreateTaskCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_CreateTaskCompleted(CreateTaskCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.CreateTaskString">
+            <summary>Sets the shim of Mls.CreateTask(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndCreateTaskIAsyncResult">
+            <summary>Sets the shim of Mls.EndCreateTask(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetDefListIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetDefList(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetMLSFieldsAndCriteriaIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetMLSFieldsAndCriteria(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetMetadataIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetMetadata(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetTaskProgressIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskProgress(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetTaskResultIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskResult(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetTaskStatusIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskStatus(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndGetTmkLogIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTmkLog(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndSearchMlsIAsyncResult">
+            <summary>Sets the shim of Mls.EndSearchMls(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndSetTmkLogModeIAsyncResult">
+            <summary>Sets the shim of Mls.EndSetTmkLogMode(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.EndUpdateMlsBoardsIAsyncResult">
+            <summary>Sets the shim of Mls.EndUpdateMlsBoards(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetDefListAsyncString">
+            <summary>Sets the shim of Mls.GetDefListAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetDefListAsyncStringObject">
+            <summary>Sets the shim of Mls.GetDefListAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetDefListCompletedAddGetDefListCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetDefListCompleted(GetDefListCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetDefListCompletedRemoveGetDefListCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetDefListCompleted(GetDefListCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetDefListString">
+            <summary>Sets the shim of Mls.GetDefList(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMLSFieldsAndCriteriaAsyncString">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteriaAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMLSFieldsAndCriteriaAsyncStringObject">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteriaAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMLSFieldsAndCriteriaCompletedAddGetMLSFieldsAndCriteriaCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetMLSFieldsAndCriteriaCompleted(GetMLSFieldsAndCriteriaCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMLSFieldsAndCriteriaCompletedRemoveGetMLSFieldsAndCriteriaCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetMLSFieldsAndCriteriaCompleted(GetMLSFieldsAndCriteriaCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMLSFieldsAndCriteriaString">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteria(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMetadataAsyncString">
+            <summary>Sets the shim of Mls.GetMetadataAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMetadataAsyncStringObject">
+            <summary>Sets the shim of Mls.GetMetadataAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMetadataCompletedAddGetMetadataCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetMetadataCompleted(GetMetadataCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMetadataCompletedRemoveGetMetadataCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetMetadataCompleted(GetMetadataCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetMetadataString">
+            <summary>Sets the shim of Mls.GetMetadata(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskProgressAsyncString">
+            <summary>Sets the shim of Mls.GetTaskProgressAsync(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskProgressAsyncStringObject">
+            <summary>Sets the shim of Mls.GetTaskProgressAsync(String i_sMessageHeader, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskProgressCompletedAddGetTaskProgressCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskProgressCompleted(GetTaskProgressCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskProgressCompletedRemoveGetTaskProgressCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskProgressCompleted(GetTaskProgressCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskProgressString">
+            <summary>Sets the shim of Mls.GetTaskProgress(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskResultAsyncStringString">
+            <summary>Sets the shim of Mls.GetTaskResultAsync(String i_sMessageHeader, String objectID)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskResultAsyncStringStringObject">
+            <summary>Sets the shim of Mls.GetTaskResultAsync(String i_sMessageHeader, String objectID, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskResultCompletedAddGetTaskResultCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskResultCompleted(GetTaskResultCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskResultCompletedRemoveGetTaskResultCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskResultCompleted(GetTaskResultCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskResultStringString">
+            <summary>Sets the shim of Mls.GetTaskResult(String i_sMessageHeader, String objectID)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskStatusAsyncString">
+            <summary>Sets the shim of Mls.GetTaskStatusAsync(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskStatusAsyncStringObject">
+            <summary>Sets the shim of Mls.GetTaskStatusAsync(String i_sMessageHeader, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskStatusCompletedAddGetTaskStatusCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskStatusCompleted(GetTaskStatusCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskStatusCompletedRemoveGetTaskStatusCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskStatusCompleted(GetTaskStatusCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTaskStatusString">
+            <summary>Sets the shim of Mls.GetTaskStatus(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTmkLog">
+            <summary>Sets the shim of Mls.GetTmkLog()</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTmkLogAsync">
+            <summary>Sets the shim of Mls.GetTmkLogAsync()</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTmkLogAsyncObject">
+            <summary>Sets the shim of Mls.GetTmkLogAsync(Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTmkLogCompletedAddGetTmkLogCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTmkLogCompleted(GetTmkLogCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.GetTmkLogCompletedRemoveGetTmkLogCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTmkLogCompleted(GetTmkLogCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnCreateTaskOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnCreateTaskOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetDefListOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetDefListOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetMLSFieldsAndCriteriaOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetMLSFieldsAndCriteriaOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetMetadataOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetMetadataOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetTaskProgressOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskProgressOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetTaskResultOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskResultOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetTaskStatusOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskStatusOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnGetTmkLogOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTmkLogOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnSearchMlsOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnSearchMlsOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnSetTmkLogModeOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnSetTmkLogModeOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.OnUpdateMlsBoardsOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnUpdateMlsBoardsOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SearchMlsAsyncString">
+            <summary>Sets the shim of Mls.SearchMlsAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SearchMlsAsyncStringObject">
+            <summary>Sets the shim of Mls.SearchMlsAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SearchMlsCompletedAddSearchMlsCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_SearchMlsCompleted(SearchMlsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SearchMlsCompletedRemoveSearchMlsCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_SearchMlsCompleted(SearchMlsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SearchMlsString">
+            <summary>Sets the shim of Mls.SearchMls(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SetTmkLogModeAsyncString">
+            <summary>Sets the shim of Mls.SetTmkLogModeAsync(String logOn)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SetTmkLogModeAsyncStringObject">
+            <summary>Sets the shim of Mls.SetTmkLogModeAsync(String logOn, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SetTmkLogModeCompletedAddSetTmkLogModeCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_SetTmkLogModeCompleted(SetTmkLogModeCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SetTmkLogModeCompletedRemoveSetTmkLogModeCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_SetTmkLogModeCompleted(SetTmkLogModeCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.SetTmkLogModeString">
+            <summary>Sets the shim of Mls.SetTmkLogMode(String logOn)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.UpdateMlsBoardsAsyncXmlNodeArray">
+            <summary>Sets the shim of Mls.UpdateMlsBoardsAsync(XmlNode[] xmlRequest)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.UpdateMlsBoardsAsyncXmlNodeArrayObject">
+            <summary>Sets the shim of Mls.UpdateMlsBoardsAsync(XmlNode[] xmlRequest, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.UpdateMlsBoardsCompletedAddUpdateMlsBoardsCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_UpdateMlsBoardsCompleted(UpdateMlsBoardsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.UpdateMlsBoardsCompletedRemoveUpdateMlsBoardsCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_UpdateMlsBoardsCompleted(UpdateMlsBoardsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.UpdateMlsBoardsXmlNodeArray">
+            <summary>Sets the shim of Mls.UpdateMlsBoards(XmlNode[] xmlRequest)</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimMls.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginCreateTaskStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginCreateTask(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetDefListStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetDefList(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetMLSFieldsAndCriteriaStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetMLSFieldsAndCriteria(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetMetadataStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetMetadata(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetTaskProgressStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskProgress(String i_sMessageHeader, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetTaskResultStringStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskResult(String i_sMessageHeader, String objectID, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetTaskStatusStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTaskStatus(String i_sMessageHeader, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginGetTmkLogAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginGetTmkLog(AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginSearchMlsStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginSearchMls(String i_sXMLParameter, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginSetTmkLogModeStringAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginSetTmkLogMode(String logOn, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.BeginUpdateMlsBoardsXmlNodeArrayAsyncCallbackObject">
+            <summary>Sets the shim of Mls.BeginUpdateMlsBoards(XmlNode[] xmlRequest, AsyncCallback callback, Object asyncState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CancelAsyncObject">
+            <summary>Sets the shim of Mls.CancelAsync(Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CreateTaskAsyncString">
+            <summary>Sets the shim of Mls.CreateTaskAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CreateTaskAsyncStringObject">
+            <summary>Sets the shim of Mls.CreateTaskAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CreateTaskCompletedAddCreateTaskCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_CreateTaskCompleted(CreateTaskCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CreateTaskCompletedRemoveCreateTaskCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_CreateTaskCompleted(CreateTaskCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.CreateTaskString">
+            <summary>Sets the shim of Mls.CreateTask(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndCreateTaskIAsyncResult">
+            <summary>Sets the shim of Mls.EndCreateTask(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetDefListIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetDefList(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetMLSFieldsAndCriteriaIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetMLSFieldsAndCriteria(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetMetadataIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetMetadata(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetTaskProgressIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskProgress(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetTaskResultIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskResult(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetTaskStatusIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTaskStatus(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndGetTmkLogIAsyncResult">
+            <summary>Sets the shim of Mls.EndGetTmkLog(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndSearchMlsIAsyncResult">
+            <summary>Sets the shim of Mls.EndSearchMls(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndSetTmkLogModeIAsyncResult">
+            <summary>Sets the shim of Mls.EndSetTmkLogMode(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.EndUpdateMlsBoardsIAsyncResult">
+            <summary>Sets the shim of Mls.EndUpdateMlsBoards(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetDefListAsyncString">
+            <summary>Sets the shim of Mls.GetDefListAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetDefListAsyncStringObject">
+            <summary>Sets the shim of Mls.GetDefListAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetDefListCompletedAddGetDefListCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetDefListCompleted(GetDefListCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetDefListCompletedRemoveGetDefListCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetDefListCompleted(GetDefListCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetDefListString">
+            <summary>Sets the shim of Mls.GetDefList(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMLSFieldsAndCriteriaAsyncString">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteriaAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMLSFieldsAndCriteriaAsyncStringObject">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteriaAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMLSFieldsAndCriteriaCompletedAddGetMLSFieldsAndCriteriaCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetMLSFieldsAndCriteriaCompleted(GetMLSFieldsAndCriteriaCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMLSFieldsAndCriteriaCompletedRemoveGetMLSFieldsAndCriteriaCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetMLSFieldsAndCriteriaCompleted(GetMLSFieldsAndCriteriaCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMLSFieldsAndCriteriaString">
+            <summary>Sets the shim of Mls.GetMLSFieldsAndCriteria(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMetadataAsyncString">
+            <summary>Sets the shim of Mls.GetMetadataAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMetadataAsyncStringObject">
+            <summary>Sets the shim of Mls.GetMetadataAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMetadataCompletedAddGetMetadataCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetMetadataCompleted(GetMetadataCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMetadataCompletedRemoveGetMetadataCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetMetadataCompleted(GetMetadataCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetMetadataString">
+            <summary>Sets the shim of Mls.GetMetadata(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskProgressAsyncString">
+            <summary>Sets the shim of Mls.GetTaskProgressAsync(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskProgressAsyncStringObject">
+            <summary>Sets the shim of Mls.GetTaskProgressAsync(String i_sMessageHeader, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskProgressCompletedAddGetTaskProgressCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskProgressCompleted(GetTaskProgressCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskProgressCompletedRemoveGetTaskProgressCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskProgressCompleted(GetTaskProgressCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskProgressString">
+            <summary>Sets the shim of Mls.GetTaskProgress(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskResultAsyncStringString">
+            <summary>Sets the shim of Mls.GetTaskResultAsync(String i_sMessageHeader, String objectID)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskResultAsyncStringStringObject">
+            <summary>Sets the shim of Mls.GetTaskResultAsync(String i_sMessageHeader, String objectID, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskResultCompletedAddGetTaskResultCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskResultCompleted(GetTaskResultCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskResultCompletedRemoveGetTaskResultCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskResultCompleted(GetTaskResultCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskResultStringString">
+            <summary>Sets the shim of Mls.GetTaskResult(String i_sMessageHeader, String objectID)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskStatusAsyncString">
+            <summary>Sets the shim of Mls.GetTaskStatusAsync(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskStatusAsyncStringObject">
+            <summary>Sets the shim of Mls.GetTaskStatusAsync(String i_sMessageHeader, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskStatusCompletedAddGetTaskStatusCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTaskStatusCompleted(GetTaskStatusCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskStatusCompletedRemoveGetTaskStatusCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTaskStatusCompleted(GetTaskStatusCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTaskStatusString">
+            <summary>Sets the shim of Mls.GetTaskStatus(String i_sMessageHeader)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTmkLog">
+            <summary>Sets the shim of Mls.GetTmkLog()</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTmkLogAsync">
+            <summary>Sets the shim of Mls.GetTmkLogAsync()</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTmkLogAsyncObject">
+            <summary>Sets the shim of Mls.GetTmkLogAsync(Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTmkLogCompletedAddGetTmkLogCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_GetTmkLogCompleted(GetTmkLogCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.GetTmkLogCompletedRemoveGetTmkLogCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_GetTmkLogCompleted(GetTmkLogCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnCreateTaskOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnCreateTaskOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetDefListOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetDefListOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetMLSFieldsAndCriteriaOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetMLSFieldsAndCriteriaOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetMetadataOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetMetadataOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetTaskProgressOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskProgressOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetTaskResultOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskResultOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetTaskStatusOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTaskStatusOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnGetTmkLogOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnGetTmkLogOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnSearchMlsOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnSearchMlsOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnSetTmkLogModeOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnSetTmkLogModeOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.OnUpdateMlsBoardsOperationCompletedObject">
+            <summary>Sets the shim of Mls.OnUpdateMlsBoardsOperationCompleted(Object arg)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SearchMlsAsyncString">
+            <summary>Sets the shim of Mls.SearchMlsAsync(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SearchMlsAsyncStringObject">
+            <summary>Sets the shim of Mls.SearchMlsAsync(String i_sXMLParameter, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SearchMlsCompletedAddSearchMlsCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_SearchMlsCompleted(SearchMlsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SearchMlsCompletedRemoveSearchMlsCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_SearchMlsCompleted(SearchMlsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SearchMlsString">
+            <summary>Sets the shim of Mls.SearchMls(String i_sXMLParameter)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SetTmkLogModeAsyncString">
+            <summary>Sets the shim of Mls.SetTmkLogModeAsync(String logOn)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SetTmkLogModeAsyncStringObject">
+            <summary>Sets the shim of Mls.SetTmkLogModeAsync(String logOn, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SetTmkLogModeCompletedAddSetTmkLogModeCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_SetTmkLogModeCompleted(SetTmkLogModeCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SetTmkLogModeCompletedRemoveSetTmkLogModeCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_SetTmkLogModeCompleted(SetTmkLogModeCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.SetTmkLogModeString">
+            <summary>Sets the shim of Mls.SetTmkLogMode(String logOn)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.UpdateMlsBoardsAsyncXmlNodeArray">
+            <summary>Sets the shim of Mls.UpdateMlsBoardsAsync(XmlNode[] xmlRequest)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.UpdateMlsBoardsAsyncXmlNodeArrayObject">
+            <summary>Sets the shim of Mls.UpdateMlsBoardsAsync(XmlNode[] xmlRequest, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.UpdateMlsBoardsCompletedAddUpdateMlsBoardsCompletedEventHandler">
+            <summary>Sets the shim of Mls.add_UpdateMlsBoardsCompleted(UpdateMlsBoardsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.UpdateMlsBoardsCompletedRemoveUpdateMlsBoardsCompletedEventHandler">
+            <summary>Sets the shim of Mls.remove_UpdateMlsBoardsCompleted(UpdateMlsBoardsCompletedEventHandler value)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimMls.AllInstances.UpdateMlsBoardsXmlNodeArray">
+            <summary>Sets the shim of Mls.UpdateMlsBoards(XmlNode[] xmlRequest)</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimSearchMlsCompletedEventArgs">
+            <summary>Shim type of SearchMlsCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSearchMlsCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSearchMlsCompletedEventArgs.#ctor(SearchMlsCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSearchMlsCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSearchMlsCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSearchMlsCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSearchMlsCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of SearchMlsCompletedEventArgs.SearchMlsCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSearchMlsCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of SearchMlsCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimSearchMlsCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSearchMlsCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of SearchMlsCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs">
+            <summary>Shim type of SetTmkLogModeCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.#ctor(SetTmkLogModeCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of SetTmkLogModeCompletedEventArgs.SetTmkLogModeCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of SetTmkLogModeCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimSetTmkLogModeCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of SetTmkLogModeCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs">
+            <summary>Shim type of UpdateMlsBoardsCompletedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.#ctor(UpdateMlsBoardsCompletedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.ConstructorObjectArrayExceptionBooleanObject">
+            <summary>Sets the shim of UpdateMlsBoardsCompletedEventArgs.UpdateMlsBoardsCompletedEventArgs(Object[] results, Exception exception, Boolean cancelled, Object userState)</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.ResultGet">
+            <summary>Sets the shim of UpdateMlsBoardsCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimUpdateMlsBoardsCompletedEventArgs.AllInstances.ResultGet">
+            <summary>Sets the shim of UpdateMlsBoardsCompletedEventArgs.get_Result()</summary>
+        </member>
+        <member name="T:Global.Fakes.StubMls">
+            <summary>Stub type of Mls</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.Abort">
+            <summary>Sets the stub of WebClientProtocol.Abort()</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.Abort01">
+            <summary>Sets the stub of WebClientProtocol.Abort()</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.AttachBackingFieldToSite">
+            <summary>Attaches delegates to emulate StubMls.Site as a property with a backing field.</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.CanRaiseEventsGet">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.Dispose(System.Boolean)">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.DisposeBoolean">
+            <summary>Sets the stub of Component.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetReaderForMessage(System.Web.Services.Protocols.SoapClientMessage,System.Int32)">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetReaderForMessage(SoapClientMessage message, Int32 bufferSize)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetReaderForMessageSoapClientMessageInt32">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetReaderForMessage(SoapClientMessage message, Int32 bufferSize)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetService(System.Type)">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetServiceType">
+            <summary>Sets the stub of Component.GetService(Type service)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetWebRequest(System.Uri)">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetWebRequest(Uri uri)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetWebRequestUri">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetWebRequest(Uri uri)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetWebResponse(System.Net.WebRequest)">
+            <summary>Sets the stub of HttpWebClientProtocol.GetWebResponse(WebRequest request)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetWebResponse(System.Net.WebRequest,System.IAsyncResult)">
+            <summary>Sets the stub of HttpWebClientProtocol.GetWebResponse(WebRequest request, IAsyncResult result)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetWebResponseWebRequest">
+            <summary>Sets the stub of HttpWebClientProtocol.GetWebResponse(WebRequest request)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetWebResponseWebRequestIAsyncResult">
+            <summary>Sets the stub of HttpWebClientProtocol.GetWebResponse(WebRequest request, IAsyncResult result)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.GetWriterForMessage(System.Web.Services.Protocols.SoapClientMessage,System.Int32)">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetWriterForMessage(SoapClientMessage message, Int32 bufferSize)</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.GetWriterForMessageSoapClientMessageInt32">
+            <summary>Sets the stub of SoapHttpClientProtocol.GetWriterForMessage(SoapClientMessage message, Int32 bufferSize)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.InitializeStub">
+            <summary>Initializes a new instance of type StubMls</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.SiteGet">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.SiteSetISite">
+            <summary>Sets the stub of Component.set_Site(ISite value)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubMls.ToString">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="F:Global.Fakes.StubMls.ToString01">
+            <summary>Sets the stub of Component.ToString()</summary>
+        </member>
+        <member name="P:Global.Fakes.StubMls.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Global.Fakes.StubMls.CanRaiseEvents">
+            <summary>Sets the stub of Component.get_CanRaiseEvents()</summary>
+        </member>
+        <member name="P:Global.Fakes.StubMls.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Global.Fakes.StubMls.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:Global.Fakes.StubMls.Site">
+            <summary>Sets the stub of Component.get_Site()</summary>
+        </member>
+        <member name="T:Tcs.SearchEngineService.Fakes.ShimSearchConstants">
+            <summary>Shim type of Tcs.SearchEngineService.SearchConstants</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchConstants.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchConstants.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchConstants.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchConstants.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:Tcs.SearchEngineService.Fakes.ShimSearchHandler">
+            <summary>Shim type of Tcs.SearchEngineService.SearchHandler</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchHandler.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchHandler.#ctor(Tcs.SearchEngineService.SearchHandler)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchHandler.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.ShimSearchHandler.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.ConstructorString">
+            <summary>Sets the shim of SearchHandler.SearchHandler(String url)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.CreateTaskString">
+            <summary>Sets the shim of SearchHandler.CreateTask(String requestXml)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.GetListingSearchResultString">
+            <summary>Sets the shim of SearchHandler.GetListingSearchResult(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.GetResultCountString">
+            <summary>Sets the shim of SearchHandler.GetResultCount(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.GetSearchResultCountString">
+            <summary>Sets the shim of SearchHandler.GetSearchResultCount(String requestXml)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.GetSucessFailureResultString">
+            <summary>Sets the shim of SearchHandler.GetSucessFailureResult(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.SearchMlsString">
+            <summary>Sets the shim of SearchHandler.SearchMls(String requestXml)</summary>
+        </member>
+        <member name="T:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.CreateTaskString">
+            <summary>Sets the shim of SearchHandler.CreateTask(String requestXml)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.GetListingSearchResultString">
+            <summary>Sets the shim of SearchHandler.GetListingSearchResult(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.GetResultCountString">
+            <summary>Sets the shim of SearchHandler.GetResultCount(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.GetSearchResultCountString">
+            <summary>Sets the shim of SearchHandler.GetSearchResultCount(String requestXml)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.GetSucessFailureResultString">
+            <summary>Sets the shim of SearchHandler.GetSucessFailureResult(String taskId)</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.ShimSearchHandler.AllInstances.SearchMlsString">
+            <summary>Sets the shim of SearchHandler.SearchMls(String requestXml)</summary>
+        </member>
+        <member name="T:Tcs.SearchEngineService.Fakes.StubSearchHandler">
+            <summary>Stub type of Tcs.SearchEngineService.SearchHandler</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.StubSearchHandler.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Tcs.SearchEngineService.Fakes.StubSearchHandler.InitializeStub">
+            <summary>Initializes a new instance of type StubSearchHandler</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.StubSearchHandler.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.StubSearchHandler.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Tcs.SearchEngineService.Fakes.StubSearchHandler.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

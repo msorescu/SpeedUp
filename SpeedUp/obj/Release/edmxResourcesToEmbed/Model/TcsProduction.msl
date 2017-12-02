@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCSModelProductionStoreContainer" CdmEntityContainer="TCSEntitiesProduction">
+    <EntitySetMapping Name="tcs_error_log">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_error_log">
+        <MappingFragment StoreEntitySet="tcs_error_log">
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="error_code" ColumnName="error_code" />
+          <ScalarProperty Name="error_type" ColumnName="error_type" />
+          <ScalarProperty Name="error_msg" ColumnName="error_msg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_request_log">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_request_log">
+        <MappingFragment StoreEntitySet="tcs_request_log">
+          <ScalarProperty Name="client_task_ref" ColumnName="client_task_ref" />
+          <ScalarProperty Name="client_name" ColumnName="client_name" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="mls_user_name" ColumnName="mls_user_name" />
+          <ScalarProperty Name="web_server" ColumnName="web_server" />
+          <ScalarProperty Name="location_path" ColumnName="location_path" />
+          <ScalarProperty Name="function_id" ColumnName="function_id" />
+          <ScalarProperty Name="request_xml" ColumnName="request_xml" />
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="when_created" ColumnName="when_created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cma_mls_board_connections">
+      <EntityTypeMapping TypeName="TCSModelProduction.cma_mls_board_connections">
+        <MappingFragment StoreEntitySet="cma_mls_board_connections">
+          <ScalarProperty Name="content_xml" ColumnName="content_xml" />
+          <ScalarProperty Name="connection_status_id" ColumnName="connection_status_id" />
+          <ScalarProperty Name="is_login_required" ColumnName="is_login_required" />
+          <ScalarProperty Name="when_checked" ColumnName="when_checked" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="connection_name" ColumnName="connection_name" />
+          <ScalarProperty Name="connection_type" ColumnName="connection_type" />
+          <ScalarProperty Name="definition_file" ColumnName="definition_file" />
+          <ScalarProperty Name="connection_id" ColumnName="connection_id" />
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cma_mls_boards">
+      <EntityTypeMapping TypeName="TCSModelProduction.cma_mls_boards">
+        <MappingFragment StoreEntitySet="cma_mls_boards">
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="board_status_id" ColumnName="board_status_id" />
+          <ScalarProperty Name="url_location_path" ColumnName="url_location_path" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="state_name" ColumnName="state_name" />
+          <ScalarProperty Name="vendor_name" ColumnName="vendor_name" />
+          <ScalarProperty Name="board_name" ColumnName="board_name" />
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cma_mls_modules">
+      <EntityTypeMapping TypeName="TCSModelProduction.cma_mls_modules">
+        <MappingFragment StoreEntitySet="cma_mls_modules">
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_indexed_datasources">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_indexed_datasources">
+        <MappingFragment StoreEntitySet="tcs_indexed_datasources">
+          <ScalarProperty Name="when_created" ColumnName="when_created" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_module_id_to_data_source_id">
+      <EntityTypeMapping TypeName="TCSModelProduction.tcs_module_id_to_data_source_id">
+        <MappingFragment StoreEntitySet="tcs_module_id_to_data_source_id">
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="data_source_type" ColumnName="data_source_type" />
+          <ScalarProperty Name="residential_class" ColumnName="residential_class" />
+          <ScalarProperty Name="is_open_house_only" ColumnName="is_open_house_only" />
+          <ScalarProperty Name="ua_password" ColumnName="ua_password" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="login_name" ColumnName="login_name" />
+          <ScalarProperty Name="data_source_name" ColumnName="data_source_name" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="tcs_GetBoardID" FunctionName="TCSModelProduction.Store.tcs_GetBoardID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TCSModelProduction.tcs_GetBoardID_Result">
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

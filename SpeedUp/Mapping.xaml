@@ -1,0 +1,18 @@
+﻿<Window x:Class="SpeedUp.Mapping"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mapping" Height="846" Width="860">
+    <Grid Width="838">
+        <ListView Height="271" HorizontalAlignment="Left" ItemsSource="{Binding DefFileDataCollection}" Margin="10,10,0,0" Name="listView1" VerticalAlignment="Top" Width="816">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding FileName}" Header="File Name" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding FileSize}" Header="File Size" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding BoardType}" Header="Board Type" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PropertyClass}" Header="Property Class" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Version}" Header="Version" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

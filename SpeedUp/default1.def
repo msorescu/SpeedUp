@@ -1,0 +1,56 @@
+;Template 
+
+[Common]
+NameOfOrigin=TopProducer
+BoardName=TestBoard
+BoardType=RESIDENTIAL
+Version=0
+Build=1
+LastModified=May 26, 2009
+Tcpip=$TCPIP_TYPE$
+
+[TcpIp]
+Retsversion=$RETS_VERSION$
+Httpversion=$HTTP_VERSION$
+HttpMethod=$HTTP_METHOD$
+;GetMetadata=1
+;GetmetaDataType=$METEDATA_QUERY$
+UseRelativePath=$USE_RELATIVEPATH$
+TCSRecCount=&Count=2
+
+[Standard_Search]
+ST_MLSNo=MLSNo
+
+[Fields]
+Status=__CUST__2
+MLSNo=__CUST__27
+
+[SecList]
+Name=__PASS1__
+Pw=__PASS2__
+Label_PASS1=MLS Agent ID
+Label_PASS2=MLS Password
+RetsUAUserAgent=$RETS_UA_USERAGENT$
+RetsUAPwd=$RETS_UA_PASSWORD$
+HttpUserAgent=$HTTP_USERAGENT$
+
+[MainScript]
+transmit "$LOGIN_URL$^M"
+transmit "username="
+transmit "\SecList.Name\"
+transmit "&password="
+transmit "\SecList.Pw\^M"
+transmit "$SEARCH_QUERY$"
+
+;[PicScript]
+;transmit "$LOGIN_URL$^M"
+;transmit "username="
+;transmit "\SecList.Name\"
+;transmit "&password="
+;transmit "\SecList.Pw\^M"
+;transmit "$PICTURE_QUERY$"
+
+[MLSRecordsEx]
+@"MLNumber" "FldName=RecordID, InpLength=20, CutBy=\9, FldType=I"
+
+

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SystemModelStoreContainer" CdmEntityContainer="SystemEntities">
+    <FunctionImportMapping FunctionImportName="spDA_RETSConnectionInfo_sel" FunctionName="SystemModel.Store.spDA_RETSConnectionInfo_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_RETSConnectionInfo_sel_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDA_TCSDatasource_sel" FunctionName="SystemModel.Store.spDA_TCSDatasource_sel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SystemModel.spDA_TCSDatasource_sel_Result" />
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

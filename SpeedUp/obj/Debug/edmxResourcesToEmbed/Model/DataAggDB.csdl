@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SystemModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="SystemEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+    <FunctionImport Name="spDA_RETSConnectionInfo_sel" ReturnType="Collection(SystemModel.spDA_RETSConnectionInfo_sel_Result)">
+      <Parameter Name="MLSID" Mode="In" Type="String" />
+      <Parameter Name="debug" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spDA_TCSDatasource_sel" ReturnType="Collection(SystemModel.spDA_TCSDatasource_sel_Result)">
+      <Parameter Name="TCSModuleID" Mode="In" Type="String" />
+      <Parameter Name="Debug" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="spDA_GetDataSourceConfigBasic" ReturnType="Collection(SystemModel.spDA_GetDataSourceConfigBasic_Result)">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="PROTOCOL" Mode="In" Type="String" />
+      <Parameter Name="FILEFORMAT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDA_RETSLoginInfo_sel" ReturnType="Collection(SystemModel.spDA_RETSLoginInfo_sel_Result)" />
+    <FunctionImport Name="spDA_RETSListingConfig_sel" ReturnType="Collection(SystemModel.spDA_RETSListingConfig_sel_Result)" />
+    <FunctionImport Name="spDA_RETSRosterConfig_sel" ReturnType="Collection(SystemModel.spDA_RETSRosterConfig_sel_Result)" />
+    <FunctionImport Name="spDA_GetDataSourceID" ReturnType="Collection(SystemModel.spDA_GetDataSourceID)">
+      <Parameter Name="DSID" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDA_SoldToActiveDataSource_sel" ReturnType="Collection(SystemModel.spDA_SoldToActiveDataSource_sel_Result)" />
+  </EntityContainer>
+  <ComplexType Name="spDA_RETSConnectionInfo_sel_Result">
+    <Property Type="String" Name="RETSLoginURL" Nullable="true" />
+    <Property Type="String" Name="RETSUserName" Nullable="true" />
+    <Property Type="String" Name="RETSPassword" Nullable="true" />
+    <Property Type="String" Name="RETSUserAgent" Nullable="true" />
+    <Property Type="String" Name="RETSUserAgentPassword" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spDA_TCSDatasource_sel_Result">
+    <Property Type="String" Name="OriginalDataSourceID" Nullable="false" />
+    <Property Type="String" Name="datasourcename" Nullable="false" />
+    <Property Type="String" Name="TCSModuleID" Nullable="false" />
+    <Property Type="Int32" Name="datasourceid" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spDA_GetDataSourceConfigBasic_Result">
+    <Property Type="String" Name="AggregationSubType" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="AggregationType" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ProtocolInfo" Nullable="true" />
+    <Property Type="String" Name="FileFormatInfo" Nullable="true" />
+    <Property Type="Int32" Name="DATASOURCECONFIGID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spDA_RETSLoginInfo_sel_Result">
+    <Property Type="String" Name="mls_name" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="data_source_id" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="login_type" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="rets_url" Nullable="true" />
+    <Property Type="String" Name="user_name" Nullable="true" />
+    <Property Type="String" Name="password" Nullable="true" />
+    <Property Type="String" Name="user_agent" Nullable="true" />
+    <Property Type="String" Name="user_agent_password" Nullable="true" />
+    <Property Type="String" Name="rets_version" Nullable="true" />
+    <Property Type="String" Name="http_version" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="http_method" Nullable="true" />
+    <Property Type="String" Name="auth_type" MaxLength="1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spDA_RETSListingConfig_sel_Result">
+    <Property Type="String" Name="mls_name" Nullable="true" />
+    <Property Type="String" Name="data_source_id" Nullable="true" />
+    <Property Type="String" Name="resource_type" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="resource" Nullable="true" />
+    <Property Type="String" Name="class" Nullable="true" />
+    <Property Type="String" Name="search_limit" Nullable="true" />
+    <Property Type="String" Name="search_format" Nullable="true" />
+    <Property Type="Int32" Name="count_records_active" Nullable="true" />
+    <Property Type="String" Name="count_records_sold" Nullable="true" />
+    <Property Type="String" Name="count_records_offmarket" Nullable="true" />
+    <Property Type="String" Name="last_modified_date_field" Nullable="true" />
+    <Property Type="String" Name="key_field" Nullable="true" />
+    <Property Type="String" Name="sold_date_field" Nullable="true" />
+    <Property Type="String" Name="status_active_dqml_query" Nullable="true" />
+    <Property Type="String" Name="status_sold_dqml_query" Nullable="true" />
+    <Property Type="String" Name="status_offmarket_dqml_query" Nullable="true" />
+    <Property Type="String" Name="photo_type" Nullable="true" />
+    <Property Type="String" Name="photo_last_modified_field" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spDA_RETSRosterConfig_sel_Result">
+    <Property Type="String" Name="mls_name" Nullable="true" />
+    <Property Type="String" Name="data_source_id" Nullable="true" />
+    <Property Type="String" Name="resource_type" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="resource" Nullable="true" />
+    <Property Type="String" Name="class" Nullable="true" />
+    <Property Type="String" Name="search_limit" Nullable="true" />
+    <Property Type="String" Name="search_format" Nullable="true" />
+    <Property Type="Int32" Name="count_records_active" Nullable="true" />
+    <Property Type="String" Name="last_modified_date_field" Nullable="true" />
+    <Property Type="String" Name="key_field" Nullable="true" />
+    <Property Type="String" Name="status_active_dqml_query" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spDA_GetDataSourceID">
+    <Property Type="Int32" Name="DATASOURCEID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spDA_SoldToActiveDataSource_sel_Result">
+    <Property Type="String" Name="sold_data_source_id" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="sold_mls_name" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="main_data_source_id" Nullable="true" />
+  </ComplexType>
+</Schema>

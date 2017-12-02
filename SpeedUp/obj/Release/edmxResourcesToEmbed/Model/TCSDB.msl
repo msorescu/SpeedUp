@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TCSModelStoreContainer" CdmEntityContainer="TCSEntities">
+    <EntitySetMapping Name="tcs_module_class_settings">
+      <EntityTypeMapping TypeName="TCSModel.tcs_module_class_settings">
+        <MappingFragment StoreEntitySet="tcs_module_class_settings">
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="connection_name" ColumnName="connection_name" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="when_updated" ColumnName="when_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="cma_GetMLSConnection" FunctionName="TCSModel.Store.cma_GetMLSConnection">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TCSModel.cma_GetMLSConnection_Result">
+          <ScalarProperty Name="board_id" ColumnName="board_id" />
+          <ScalarProperty Name="vendor_name" ColumnName="vendor_name" />
+          <ScalarProperty Name="state_name" ColumnName="state_name" />
+          <ScalarProperty Name="board_name" ColumnName="board_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="url_location_path" ColumnName="url_location_path" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="connection_id" ColumnName="connection_id" />
+          <ScalarProperty Name="connection_type" ColumnName="connection_type" />
+          <ScalarProperty Name="connection_name" ColumnName="connection_name" />
+          <ScalarProperty Name="is_login_required" ColumnName="is_login_required" />
+          <ScalarProperty Name="property_sub_type" ColumnName="property_sub_type" />
+          <ScalarProperty Name="type_description" ColumnName="type_description" />
+          <ScalarProperty Name="definition_file" ColumnName="definition_file" />
+          <ScalarProperty Name="when_checked" ColumnName="when_checked" />
+          <ScalarProperty Name="mls_search_order" ColumnName="mls_search_order" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tcs_rets_connection_info">
+      <EntityTypeMapping TypeName="TCSModel.tcs_rets_connection_info">
+        <MappingFragment StoreEntitySet="tcs_rets_connection_info">
+          <ScalarProperty Name="login_url" ColumnName="login_url" />
+          <ScalarProperty Name="ua_password" ColumnName="ua_password" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="rdc_code" ColumnName="rdc_code" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_mls_metadata_fields">
+      <EntityTypeMapping TypeName="TCSModel.tcs_mls_metadata_fields">
+        <MappingFragment StoreEntitySet="tcs_mls_metadata_fields">
+          <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="resource" ColumnName="resource" />
+          <ScalarProperty Name="data_type" ColumnName="data_type" />
+          <ScalarProperty Name="maximum_length" ColumnName="maximum_length" />
+          <ScalarProperty Name="standard_name" ColumnName="standard_name" />
+          <ScalarProperty Name="long_name" ColumnName="long_name" />
+          <ScalarProperty Name="system_name" ColumnName="system_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="field_id" ColumnName="field_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tcs_standard_result_fields">
+      <EntityTypeMapping TypeName="TCSModel.tcs_standard_result_fields">
+        <MappingFragment StoreEntitySet="tcs_standard_result_fields">
+          <ScalarProperty Name="resource_type" ColumnName="resource_type" />
+          <ScalarProperty Name="def_name" ColumnName="def_name" />
+          <ScalarProperty Name="property_type" ColumnName="property_type" />
+          <ScalarProperty Name="property_class" ColumnName="property_class" />
+          <ScalarProperty Name="system_name" ColumnName="system_name" />
+          <ScalarProperty Name="rets_long_name" ColumnName="rets_long_name" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="field_id" ColumnName="field_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PR_tcs_standard_result_fields_GetLongname" FunctionName="TCSModel.Store.PR_tcs_standard_result_fields_GetLongname">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TCSModel.PR_tcs_standard_result_fields_GetLongname_Result">
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="rets_long_name" ColumnName="rets_long_name" />
+          <ScalarProperty Name="system_name" ColumnName="system_name" />
+          <ScalarProperty Name="num" ColumnName="num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tcs_clean_loggins">
+      <EntityTypeMapping TypeName="TCSModel.tcs_clean_loggins">
+        <MappingFragment StoreEntitySet="tcs_clean_loggins">
+          <ScalarProperty Name="rets_version" ColumnName="rets_version" />
+          <ScalarProperty Name="user_agent_password" ColumnName="user_agent_password" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="rets_url" ColumnName="rets_url" />
+          <ScalarProperty Name="login_type" ColumnName="login_type" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="module_name" ColumnName="module_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CleanLogins1">
+      <EntityTypeMapping TypeName="TCSModel.CleanLogins1">
+        <MappingFragment StoreEntitySet="CleanLogins1">
+          <ScalarProperty Name="auth_type" ColumnName="auth_type" />
+          <ScalarProperty Name="http_method" ColumnName="http_method" />
+          <ScalarProperty Name="http_version" ColumnName="http_version" />
+          <ScalarProperty Name="rets_version" ColumnName="rets_version" />
+          <ScalarProperty Name="user_agent_password" ColumnName="user_agent_password" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="rets_url" ColumnName="rets_url" />
+          <ScalarProperty Name="login_type" ColumnName="login_type" />
+          <ScalarProperty Name="data_source_id" ColumnName="data_source_id" />
+          <ScalarProperty Name="mls_name" ColumnName="mls_name" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mls_vendor">
+      <EntityTypeMapping TypeName="TCSModel.mls_vendor">
+        <MappingFragment StoreEntitySet="mls_vendor">
+          <ScalarProperty Name="basemlsid" ColumnName="basemlsid" />
+          <ScalarProperty Name="moduleid" ColumnName="moduleid" />
+          <ScalarProperty Name="modulename" ColumnName="modulename" />
+          <ScalarProperty Name="mlsid" ColumnName="mlsid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TCSModelStoreContainer">
+    <EntitySet Name="CleanLogins1" EntityType="TCSModel.Store.CleanLogins1" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="mls_vendor" EntityType="TCSModel.Store.mls_vendor" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tcs_clean_loggins" EntityType="TCSModel.Store.tcs_clean_loggins" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tcs_mls_metadata_fields" EntityType="TCSModel.Store.tcs_mls_metadata_fields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tcs_module_class_settings" EntityType="TCSModel.Store.tcs_module_class_settings" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tcs_rets_connection_info" EntityType="TCSModel.Store.tcs_rets_connection_info" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tcs_standard_result_fields" EntityType="TCSModel.Store.tcs_standard_result_fields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="CleanLogins1">
+    <Key>
+      <PropertyRef Name="module_id" />
+    </Key>
+    <Property Name="module_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mls_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="data_source_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="login_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="rets_url" Type="nvarchar" MaxLength="500" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_agent" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_agent_password" Type="nvarchar" MaxLength="50" />
+    <Property Name="rets_version" Type="nvarchar" MaxLength="50" />
+    <Property Name="http_version" Type="nvarchar" MaxLength="50" />
+    <Property Name="http_method" Type="nvarchar" MaxLength="50" />
+    <Property Name="auth_type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="mls_vendor">
+    <Key>
+      <PropertyRef Name="mlsid" />
+    </Key>
+    <Property Name="mlsid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="modulename" Type="nvarchar" MaxLength="50" />
+    <Property Name="moduleid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="basemlsid" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tcs_clean_loggins">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="user_name" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="module_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="data_source_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="login_type" Type="nvarchar" MaxLength="255" />
+    <Property Name="rets_url" Type="nvarchar" MaxLength="255" />
+    <Property Name="user_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+    <Property Name="user_agent" Type="nvarchar" MaxLength="255" />
+    <Property Name="user_agent_password" Type="nvarchar" MaxLength="255" />
+    <Property Name="rets_version" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="tcs_mls_metadata_fields">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="system_name" />
+      <PropertyRef Name="resource" />
+      <PropertyRef Name="class" />
+    </Key>
+    <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="system_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="long_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="standard_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="maximum_length" Type="int" />
+    <Property Name="data_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="resource" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="class" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="resource_type" Type="int" />
+  </EntityType>
+  <EntityType Name="tcs_module_class_settings">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="connection_name" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="connection_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="class" Type="nvarchar" MaxLength="64" />
+    <Property Name="when_updated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tcs_rets_connection_info">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="account_type" />
+      <PropertyRef Name="rdc_code" />
+    </Key>
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="account_type" Type="int" Nullable="false" />
+    <Property Name="rdc_code" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_agent" Type="nvarchar" MaxLength="50" />
+    <Property Name="ua_password" Type="nvarchar" MaxLength="50" />
+    <Property Name="login_url" Type="nchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="tcs_standard_result_fields">
+    <Key>
+      <PropertyRef Name="module_id" />
+      <PropertyRef Name="field_name" />
+      <PropertyRef Name="rets_long_name" />
+    </Key>
+    <Property Name="field_id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="module_id" Type="smallint" Nullable="false" />
+    <Property Name="field_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="rets_long_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="system_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="property_class" Type="nvarchar" MaxLength="100" />
+    <Property Name="property_type" Type="nvarchar" MaxLength="100" />
+    <Property Name="def_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="resource_type" Type="int" />
+  </EntityType>
+  <Function Name="cma_GetMLSConnection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="board_id" Type="smallint" Mode="In" />
+    <Parameter Name="connection_type" Type="nvarchar" Mode="In" />
+    <Parameter Name="connection_name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PR_tcs_standard_result_fields_GetLongname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tcs_standard_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="vendor_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="resource_type" Type="int" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define UpgradeCode = "8BCE1326-CD91-4227-B3D3-F31CE226F78E" ?>
+  <?define Version = "2.5.18.0" ?>
+	<Product Id="*" Name="SpeedUp" Language="1033" Version="$(var.Version)" Manufacturer="TP" UpgradeCode="$(var.UpgradeCode)">
+    <Package InstallerVersion="238" Compressed="yes" InstallPrivileges="elevated"  InstallScope="perMachine"/>
+    <Media Id="1" Cabinet="Cab1.cab" EmbedCab="yes" />
+    <MajorUpgrade Schedule="afterInstallInitialize" IgnoreRemoveFailure="no" DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <Property Id="MSIUSEREALADMINDETECTION" Value="1" />
+    <UIRef Id="WixUI_InstallDir"/>
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER"/>
+		<Feature Id="ProductFeature" Title="SpeedUp" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+    </Feature>
+	</Product>
+  
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyName" Name ="TP">
+				  <Directory Id="INSTALLFOLDER" Name="SpeedUpInstallation" />
+        </Directory>
+			</Directory>
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="ApplicationShortcutDesktop" Guid="{A072CB7F-5598-4d1c-85E3-C119659B1B19}">
+          <Shortcut Id="ApplicationDesktopShortcut"
+             Name="SpeedUp"
+             Description="SpeedUp"
+             Target="[INSTALLFOLDER]SpeedUp.exe"
+             WorkingDirectory="INSTALLFOLDER"/>
+          <RemoveFolder Id="DesktopFolder" On="uninstall"/>
+          <RegistryValue
+            Root="HKCU"
+            Key="Software/SpeedUp"
+            Name="installed"
+            Type="integer"
+            Value="1"
+            KeyPath="yes"/>
+        </Component>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="SpeedUp"/>
+      </Directory>
+		</Directory>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="DA8C720E-D80D-433F-971A-56B4D4678B6D">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+             Name="SpeedUp"
+           Description="SpeedUp"
+            Target="[INSTALLFOLDER]SpeedUp.exe"
+                  WorkingDirectory="INSTALLFOLDER"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\SpeedUp" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			 <Component Id="ProductComponent">
+         <File Source="$(var.SpeedUp.TargetPath)" />
+       </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Tcs.Mls.SearchEngine.dll" />
+      </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Tcs.BusinessLogic.dll" />
+      </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Tcs.DBAccess.dll" />
+      </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Tcs.Framework.dll" />
+      </Component>
+      
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.VersionControl.Common.Integration.dll" />
+      </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.VersionControl.Common.dll" />
+      </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.VersionControl.Client.dll" />
+      </Component>
+      <Component>
+          <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.dll" />
+        </Component>
+        <Component>
+          <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.Common.Library.dll" />
+        </Component>
+      <Component>
+            <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.Common.dll" />
+          </Component>
+          <Component>
+            <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\Microsoft.TeamFoundation.Client.dll" />
+          </Component>
+      <Component>
+        <File Source="C:\Work\rootR9\Top Connecter Server\TCS_a.1_Main\Implementation\Source Code\SpeedUp\SpeedUp\bin\Release\SpeedUp.exe.config" />
+      </Component>
+        
+    </ComponentGroup>
+	</Fragment>
+</Wix>

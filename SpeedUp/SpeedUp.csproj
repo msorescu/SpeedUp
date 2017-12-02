@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AC46CD6-B542-483C-B939-8AAAD5BB33CB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpeedUp</RootNamespace>
+    <AssemblyName>SpeedUp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\TCS\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Chrisbanks2-Cold-Fusion-Hd-Speed-test.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SpeedUp.SpeedUpCLI</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>010C5A08E5B966E6B9770B0A62E5BD5248811046</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK, Version=2.3.55.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Marius\AWSUploads\AwsS3FilesSystemUploads\AwsS3FilesSystemUploads\bin\Debug\AWSSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Log">
+      <HintPath>..\..\Bin\Core.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\MySql.exe</HintPath>
+    </Reference>
+    <Reference Include="MySql.ServiceInterface">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\MySql.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.ServiceModel">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\MySql.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\..\..\..\Marius\AwsGettingStarted\src\MySql\MySql\MySql\bin\Debug\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\TCS\MySql\MySql\MySql.Tests\bin\Release\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tcs.Mls.SearchEngine">
+      <HintPath>..\..\Bin\Tcs.Mls.SearchEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Tcs.SearchEngineService">
+      <HintPath>..\..\Bin\Tcs.SearchEngineService.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controler\DEFController.cs" />
+    <Compile Include="Controls\AWS.S3.cs" />
+    <Compile Include="CredentialGathering.xaml.cs">
+      <DependentUpon>CredentialGathering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BoardCredentials.cs" />
+    <Compile Include="Model\CredentialGatheringManager.cs" />
+    <Compile Include="Helper\CommonUtilities.cs" />
+    <Compile Include="Helper\RequestXmlHelper.cs" />
+    <Compile Include="Helper\SharepointXlsHelper.cs" />
+    <Compile Include="Helper\StaticRules.cs" />
+    <Compile Include="Model\LoginInfoExtra.cs" />
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\ListhubSearch.cs" />
+    <Compile Include="Model\LLGapCompareResults.cs" />
+    <Compile Include="Model\LLGapConstants.cs" />
+    <Compile Include="Model\LLGapHelper.cs" />
+    <Compile Include="Model\LLGapManager.cs" />
+    <Compile Include="Model\LoginInfo.cs" />
+    <Compile Include="Model\ModuleEntity.cs" />
+    <Compile Include="Model\ModuleLoginContainer.cs" />
+    <Compile Include="Model\PendingStatusCompareResult.cs" />
+    <Compile Include="Model\PsaConstants.cs" />
+    <Compile Include="Model\PsaHelper.cs" />
+    <Compile Include="Model\PsaManager.cs" />
+    <Compile Include="Model\TcsProduction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TcsProduction.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TigerLeadFileParser.cs" />
+    <Compile Include="Model\TigerLeadManager.cs" />
+    <Compile Include="Model\TigerLeadReportBoardCollection.cs" />
+    <Compile Include="Model\TigerLeadReportListingTypeEntry.cs" />
+    <Compile Include="Model\TigerLeadReportRow.cs" />
+    <Compile Include="Model\TraceField.cs" />
+    <Compile Include="Model\DataAggDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAggDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\IniFile.cs" />
+    <Compile Include="ListingView.xaml.cs">
+      <DependentUpon>ListingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping.xaml.cs">
+      <DependentUpon>Mapping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DEF.cs" />
+    <Compile Include="Model\Metadata.cs" />
+    <Compile Include="Model\MlsMetadataField.cs" />
+    <Compile Include="Model\MlsMetadataLookup.cs" />
+    <Compile Include="Model\MlsResultField.cs" />
+    <Compile Include="Model\SearchField.cs" />
+    <Compile Include="Model\SearchFieldCollection.cs" />
+    <Compile Include="Model\StandardFieldDataDictionary.cs" />
+    <Compile Include="Model\StandardResultFieldFromDD.cs" />
+    <Compile Include="NewConvert.xaml.cs">
+      <DependentUpon>NewConvert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressDialog.xaml.cs" />
+    <Compile Include="Controls\ProgressDialogResult.cs" />
+    <Compile Include="Controls\ProgressDialogSettings.cs" />
+    <Compile Include="Controls\WindowSettings.cs" />
+    <Compile Include="PendingStatusAnalysis.xaml.cs">
+      <DependentUpon>PendingStatusAnalysis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductionServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StagingServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TCSDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCSDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TCSWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\TFSOperations.cs" />
+    <Compile Include="Helper\Util.cs" />
+    <Compile Include="SpeedUpCLI.cs" />
+    <Compile Include="WorkNow.xaml.cs">
+      <DependentUpon>WorkNow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CredentialGathering.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Mapping.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewConvert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PendingStatusAnalysis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkNow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\DataAggDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataAggDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Model\TCSDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TCSDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Model\TcsProduction.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TcsProduction.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SpeedUp.Model.TCSEntities.datasource" />
+    <None Include="Properties\DataSources\SpeedUp.Model.TCSEntitiesProduction.datasource" />
+    <None Include="Properties\DataSources\System.Xml.XmlElement.datasource" />
+    <None Include="Properties\DataSources\TCSEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\ProductionServiceReference\SpeedUp.ProductionServiceReference.any.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductionServiceReference\tcswebservice.wsdl" />
+    <None Include="Service References\StagingServiceReference\SpeedUp.StagingServiceReference.any.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\StagingServiceReference\TcsWebService.wsdl" />
+    <None Include="Service References\TCSWebService\SpeedUp.TCSWebService.any.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TCSWebService\TCSWebService1.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ProductionServiceReference\" />
+    <WCFMetadataStorage Include="Service References\StagingServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TCSWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCSWebService\configuration91.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCSWebService\configuration.svcinfo">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCSWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TCSWebService\TCSWebService1.disco">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StagingServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StagingServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StagingServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductionServiceReference\tcswebservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductionServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductionServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProductionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StagingServiceReference\TcsWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Chrisbanks2-Cold-Fusion-Hd-Speed-test.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.def" />
+    <Content Include="default1.def" />
+    <Resource Include="docs\MySqlCommand.xml" />
+    <Resource Include="docs\MySqlCommandBuilder.xml" />
+    <Resource Include="docs\MySqlConnection.xml" />
+    <Resource Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Resource Include="docs\MySqlDataAdapter.xml" />
+    <Resource Include="docs\MySqlDataReader.xml" />
+    <Resource Include="docs\MySqlException.xml" />
+    <Resource Include="docs\MySqlHelper.xml" />
+    <Resource Include="docs\MySqlParameter.xml" />
+    <Resource Include="docs\MySqlParameterCollection.xml" />
+    <Resource Include="docs\MySqlTransaction.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

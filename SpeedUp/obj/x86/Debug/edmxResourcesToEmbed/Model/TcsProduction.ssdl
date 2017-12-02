@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TCSModelProduction.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TCSModelProductionStoreContainer">
+    <EntitySet Name="tcs_error_log" EntityType="TCSModelProduction.Store.tcs_error_log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tcs_request_log" EntityType="TCSModelProduction.Store.tcs_request_log" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_LOG_HAS_ERROR" Association="TCSModelProduction.Store.FK_LOG_HAS_ERROR">
+      <End Role="tcs_request_log" EntitySet="tcs_request_log" />
+      <End Role="tcs_error_log" EntitySet="tcs_error_log" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tcs_error_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Name="request_id" Type="bigint" Nullable="false" />
+    <Property Name="error_code" Type="int" Nullable="false" />
+    <Property Name="error_type" Type="smallint" Nullable="false" />
+    <Property Name="error_msg" Type="varchar" Nullable="false" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="tcs_request_log">
+    <Key>
+      <PropertyRef Name="request_id" />
+    </Key>
+    <Property Name="when_created" Type="datetime" Nullable="false" />
+    <Property Name="request_id" Type="bigint" Nullable="false" />
+    <Property Name="board_id" Type="smallint" Nullable="false" />
+    <Property Name="request_xml" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="function_id" Type="smallint" Nullable="false" />
+    <Property Name="location_path" Type="nvarchar" Nullable="false" MaxLength="512" />
+    <Property Name="web_server" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="mls_user_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="zip" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="client_name" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="client_task_ref" Type="nvarchar" Nullable="false" MaxLength="512" />
+  </EntityType>
+  <Association Name="FK_LOG_HAS_ERROR">
+    <End Role="tcs_request_log" Type="TCSModelProduction.Store.tcs_request_log" Multiplicity="1" />
+    <End Role="tcs_error_log" Type="TCSModelProduction.Store.tcs_error_log" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tcs_request_log">
+        <PropertyRef Name="request_id" />
+      </Principal>
+      <Dependent Role="tcs_error_log">
+        <PropertyRef Name="request_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
